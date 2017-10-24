@@ -1,0 +1,139 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="applicable-device" content="mobile">
+<meta name="viewport" content="width=720,width=device-width, initial-scale=1,  initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<title>生辰八字免费算命_八字命运精批_在线算命_周易占卜</title>
+<script>
+
+(function (doc, win) {
+	var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		var clientWidth = docEl.clientWidth;
+		//alert(clientWidth)
+		if (!clientWidth) return;
+			var fts = clientWidth /10;
+			if(fts<32){
+				fts=32;
+			}else if(fts>72){
+				fts=72;
+			}
+			docEl.style.fontSize = fts + 'px';
+		};
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" href="..\css\style.css">
+<link rel="stylesheet" href="..\css\calendar.css">
+<script src="..\js\jquery.js"></script>
+<script src="..\js\calendar.min-1.js"></script>
+<script src="..\js\main-1.js?v=1"></script>
+</head>
+<body class="">
+<div class="wrap">
+	<header class="sm_hd">
+		<span class="hd_left bt_after"></span>
+		<h3 class="smTitle">在线测算</h3>
+		<span class="hd_right bt_after"></span>
+	</header> 
+	<script> 
+	
+	var loading = {
+		class:"<style>.loading{display:none;width:32px;height:32px;background:url(../images/loading-2.gif) center no-repeat; position:absolute;left:45%;top:45%; z-index:99999;}.mask, .maskpay{ width: 100%; position: fixed;left: 0; top: 0; right: 0; display: none; height: 100%;}.mask{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');background:rgba(0,0,0,0.3);}:root .mask{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#00000000', endColorstr='#00000000');}/*for IE9*/</style>",
+		html :'<div class="mask" id="load_mask"></div><div class="loading" id=loading_icon></div>',
+		init:function(){
+			$(document.body).append(this.class).append(this.html);
+			$("#load_mask").show();
+			$("#loading_icon").show();
+			
+		},
+		closed:function(){ 
+			$("#load_mask").hide();
+			$("#loading_icon").hide();
+		}
+		
+	} 
+	</script><style>
+#orderlist h1{margin:0;padding:.3rem;color:#74321B;border-bottom:1px solid #efefef;}
+</style>
+	<div class="sm_seclet m_b_24 m_t_22">
+		<div class="order" id='orderlist'>
+			<p style='text-align:center'>
+				<span>以下是您曾经填写的测算订单，点击查看详情</span>
+			</p>
+			
+			 
+			
+		</div>
+		<ul class="payList">
+				<div onclick="history.back(-1)" style="background:#FF7800;padding:0.3rem;border-radius:0.6rem;text-align:center;color:#fff;">返回</div>
+		</ul>
+		<div class="hrr"></div>
+	</div>
+</div>
+<!--加载-->
+<!--<div class="mask" style="display:block"></div>
+<div class="loading"></div>-->
+<script>
+	
+(function(){
+	var dataread={},html='';
+
+	var init=function(){
+		if(localStorage['orders']!==undefined){
+			dataread=JSON.parse(localStorage['orders']);
+		}
+	}
+	
+	var showorder=function(){
+		
+		//重新排序{"八字起名":{"JXW0902094327BC85":"域","JXW09020944033472":"发 
+		for(var o in dataread){
+			console.log(typeof o+" - "+o);
+			if(o!="undefined"){
+				
+				for(var n in dataread[o]){
+					var x=dataread[o];
+					 
+					html="<p onclick='location.href=\"read/?orderno="+n+"\"'><span id='"+n+"'>"+x[n]+"</span><b>"+n+"</b></p>"+html; 
+					 
+				}
+				html='<h1>'+o+'订单列表</h1>'+html;
+			} 
+		}
+		$("#orderlist").html(html);
+		 
+	}
+	init();
+	showorder();
+	
+})()
+
+$(function(){
+$("#myorderlist").hide();
+})
+</script></body>
+
+
+<div style='display:none'> 
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+		
+</div>
+
+
+</html>

@@ -1,0 +1,189 @@
+input,
+button{
+    -webkit-appearance:none;
+    outline:none
+}
+
+.bg-brimary-liner {
+    color: #fff;
+    background: -moz-linear-gradient(bottom, #fdaf6d 0%, #f56b49 100%);
+    background: -webkit-linear-gradient(bottom, #fdaf6d 0%, #f56b49 100%);
+    background: linear-gradient(to bottom, #fdaf6d 0%, #f56b49 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdaf6d00', endColorstr='#f56b4900', GradientType=1);
+}
+
+
+.page-names-detail{
+	background: #FFFBF4;
+}
+.page-names-detail .top-tite{
+	position: relative;
+	text-align: center;
+	font-size: 18px;
+	padding: 1em 0;
+	color: #5E0000;
+}
+.page-names-detail .top-tite .my-order{
+	font-size: 16px;
+	position: absolute;
+	right: 4%;
+}
+
+.page-names-detail .details-item{
+	background: #FDF3E2;
+	position: relative;
+	padding: 4px;
+	margin-bottom: .6%;
+}
+.page-names-detail .details-item .icon-figure{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../images/icon-figure.png) no-repeat;
+	position: absolute;
+}
+.page-names-detail .details-item .icon-figure.top-left{
+	background-position: bottom left;
+	top: 4px;
+	right: 4px;
+}
+.page-names-detail .details-item .icon-figure.top-right{
+	background-position: bottom right;
+	top: 4px;
+	left: 4px;
+}
+.page-names-detail .details-item .icon-figure.bottom-left{
+	background-position: top left;
+	bottom: 4px;
+	right: 4px;
+}
+.page-names-detail .details-item .icon-figure.bottom-right{
+	background-position: top right;
+	bottom: 4px;
+	left: 4px;
+}
+
+.page-names-detail .my-name{
+	text-align: center;
+	color: #5E0000;
+	font-size: 22px;
+}
+
+.page-names-detail .my-name p{
+	padding: .5em 0;
+	position: relative;
+}
+
+.page-names-detail .my-name .nama-score{
+	font-family: "chancery";
+}
+
+.page-names-detail .my-name .nama-score  i{
+	padding-left: .5rem;
+}
+.page-names-detail .my-name .name-title{
+	position: absolute;
+	left: 10.5%;
+}
+
+.page-names-detail .name-detail-box{
+	width: 100%;
+	color: #2b2b2b;
+	padding: 10px 0;
+}
+
+.page-names-detail .name-detail-box .row-item
+{
+	font-size: 16px;
+	padding: 5px 0;
+	font-size: 0;
+	text-align: center;
+}
+
+.page-names-detail .name-detail-box .row-item.info{
+	color: #5E0000;
+}
+
+.page-names-detail .name-detail-box .row-item li{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 18px;
+	position: relative;
+	overflow: hidden;
+}
+@media(max-width: 380px){
+	.page-names-detail .name-detail-box .row-item li{
+		font-size: 14px;
+	}
+}
+.page-names-detail .name-detail-box i,
+.page-names-detail .name-detail-box em{
+	font-style: normal;
+	font-weight: normal;
+}
+.page-names-detail .name-detail-box .row-item.type-1 li{
+	width: 20%;
+}
+.page-names-detail .name-detail-box .row-item.type-1 .score{
+	color: #FF5846;
+}
+.page-names-detail .name-detail-box .row-item.type-1 .score+em{
+	display: inline-block;
+	width: 1em;
+}
+.page-names-detail .name-detail-box .detai-box-warpper{
+	padding: 1em 0;
+}
+.page-names-detail .name-detail-box.name-advice .detai-box-warpper{
+	padding: 0;
+}
+.page-names-detail .name-detail-box .detai-box-warpper+.detai-box-warpper{
+	border-top: dashed 1px #CACACA;
+}
+.page-names-detail .name-detail-box.name-advice{
+	text-align: left;
+}
+.page-names-detail .name-detail-box p{
+	position: relative;
+	overflow: hidden;
+	padding: .5em 1em;
+	font-size: 18px;
+	word-break: break-all;
+}
+.page-names-detail .name-detail-box p.content-title{
+	border-bottom: solid 1px #FF5846;
+}
+.page-names-detail .name-detail-box.name-advice a{
+	float: right;
+	color: #FF5846;
+}
+.page-names-detail .name-detail-box.name-advice .advice-score span{
+	float: right;
+}
+.page-names-detail .name-detail-box.name-advice .advice-score span i{
+	color: #FF5846;
+}
+
+
+
+.page-names-detail .name-detail-box.name-advice .advice-content{
+	line-height: 1.6;
+}
+.page-names-detail .name-detail-box .influence-content.result{
+	text-align: right;
+	color: #FF5846;
+}
+.page-names-detail .name-detail-box .influence-content.result span{
+	font-size: 24px;
+}
+.btn-retest{
+	display: block;
+	width: 80%;
+	margin: 1em auto;
+	font-size: 18px;
+	border-radius: 4px;
+	height: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>八字精批-65测算网</title>
+        <link rel="shortcut icon" href="/statics/ffsm/favicon.ico"/>
+        <link href="/statics/ffsm/public/pc/pc.min.css?v=0817" rel="stylesheet" type="text/css"/>
+        <link href="/statics/ffsm/bazijingpi/2/bazijingpi.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="public_header">
+            <h1 class="public_h_logo">
+                <a href="/bazijingpi/">
+                    <img src="/statics/ffsm/public/images/logo.png" alt="在线算命"/>
+                </a>
+            </h1>
+          <!--     <a class="public_h_order" href="/inquiry/history.html">订单历史记录</a> -->
+        </div>
+        <div class="pic_banner"></div>
+        <div class="main_wrap">
+            <ul class="index_tab J_tabTitle" data-tabconid="tabContent">
+                <li class="J_tabTitItem active">
+                    <a href="javascript:;">产品介绍</a>
+                </li>
+                <li class="J_tabTitItem">
+                    <a href="javascript:;">我的测算</a>
+                </li>
+            </ul>
+            <div id="tabContent">
+                <div class="J_tabConItem tab_content">
+                    <div class="index_dashi">
+                        <div class="fr pic">
+                            <img src="/statics/ffsm/bazijingpi/2/images/img_ds.png" alt="胡洛瑜"/>
+                        </div>
+                        <p>谁都想知道自己一生中的事业、财运、婚姻、健康、性格、流年运程将是怎样。八字命格详批，是由人出生的年月日时组成为四柱，每一柱由一个天干和一个地支组成，总共是八个字，称为八字。根据八字组合，可以推断一个人一生的富贵贫贱、吉凶祸福，分析一个人的整体运势。让你在人生道路上能根据自己的命有所准备，做到“得时而进，失时而退”，从而趋吉避凶把握好自己的未来，减轻不必要的损失，让自己的财富、婚姻、事业达到真正想要的。所谓知己知彼百战百胜，知命改运，方能长行。</p>
+                    </div>
+                    <div class="public_title" id="miaodian">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                        <span>在线测算-助您掌握命运玄机</span>
+                    </div>
+                    <form class="J_ajaxForm" action="post.html" method="post">
+                        <div class="public_form_wrap">
+                            <p class="pfw_words">请填写您的个人资料开始测算</p>
+                            <ul class="pfw_ui">
+                                <li>
+                                    <span class="fl left">您的姓名：</span>
+                                    <div class="fr right">
+                                        <input type="text" id="username" name="username" class="input"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fl left">您的性别：</span>
+                                    <div class="fr right sex J_gender">
+                                        <span class="J_genderOption active" data-value="1">男</span>
+                                        <span class="J_genderOption" data-value="0">女</span>
+                                        <input type="hidden" name="gender" value="0"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fl left">出生日期：</span>
+                                    <div class="fr right ">
+                                        <input type="text" id="birthday" data-input-id="b_input" class="J_date input public_icon_sel" data-type="1" value="" placeholder="请选择日期"/>
+                                        <input type="hidden" name="birthday" id="b_input"/>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="fl left">出生时辰：</span>
+                                    <div class="fr right pfw_ui_sel J_selectChoice">
+                                        <span class="J_selectChoiceCon">时辰不清楚</span>
+                                        <select class="sel" name="hour">
+                                            <option value="" selected>时辰不清楚</option>
+                                            <option value="0">子时 0点</option>
+                                            <option value="1">丑时 1点</option>
+                                            <option value="2">丑时 2点</option>
+                                            <option value="3">寅时 3点</option>
+                                            <option value="4">寅时 4点</option>
+                                            <option value="5">卯时 5点</option>
+                                            <option value="6">卯时 6点</option>
+                                            <option value="7">辰时 7点</option>
+                                            <option value="8">辰时 8点</option>
+                                            <option value="9">巳时 9点</option>
+                                            <option value="10">巳时 10点</option>
+                                            <option value="11">午时 11点</option>
+                                            <option value="12">午时 12点</option>
+                                            <option value="13">未时 13点</option>
+                                            <option value="14">未时 14点</option>
+                                            <option value="15">申时 15点</option>
+                                            <option value="16">申时 16点</option>
+                                            <option value="17">酉时 17点</option>
+                                            <option value="18">酉时 18点</option>
+                                            <option value="19">戌时 19点</option>
+                                            <option value="20">戌时 20点</option>
+                                            <option value="21">亥时 21点</option>
+                                            <option value="22">亥时 22点</option>
+                                            <option value="23">子时 23点</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="public_agreement">
+                                <input type="checkbox" checked="checked" id="agreeInput">
+                                同意<a href="javascript:;" id="protocolShowBtn">个人隐私协议</a>
+                            </div>
+                            <div class="public_btn_s">
+                                <a href="javascript:;" class="public_btn J_ajaxSubmit">开始测算</a>
+                            </div>
+                            <p class="public_have">
+                                已有<span>25656953</span>
+                                人参与 准确率高达<span>96.8%</span>
+                            </p>
+                        </div>
+                    </form>
+                    <div class="public_title" id="bottomShowAnchor">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                        <span>本次测算后您将获得以下内容</span>
+                    </div>
+                    <p class="bzjp_box1">
+                        <img src="/statics/ffsm/bazijingpi/2/images/img_test.jpg" alt="本次测算后您将获得以下内容"/>
+                    </p>
+                    <div class="public_title">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                        <span>揭开你八字中隐藏的天机</span>
+                    </div>
+                    <div class="bzjp_box2">
+                        <p class="fb words">一个人的八字直接影响到他的财富、事业、健康和姻缘等,那么您的八字排盘又传递了哪些宝贵的信息呢？</p>
+                        <p>
+                            <img src="/statics/ffsm/bazijingpi/2/images/img_jiexiao.jpg" alt="揭开你八字中隐藏的天机"/>
+                        </p>
+                        <a href="#miaodian" class="public_btn">马上揭晓</a>
+                    </div>
+                    <div class="public_title">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                        <span>即将为您揭晓的内容</span>
+                    </div>
+                    <div class="bzjp_box3">
+                        <p>
+                            <img src="/statics/ffsm/bazijingpi/2/images/img_01.jpg" alt="事业"/>
+                        </p>
+                        <p>
+                            <img src="/statics/ffsm/bazijingpi/2/images/img_02.jpg" alt="财富"/>
+                        </p>
+                        <p>
+                            <img src="/statics/ffsm/bazijingpi/2/images/img_03.jpg" alt="烟缘"/>
+                        </p>
+                        <a href="#miaodian" class="public_btn">马上揭晓</a>
+                    </div>
+                    <div class="public_title">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                        <span>命主私信</span>
+                    </div>
+                    <div class="bzjp_box4">
+                        <ul id="myscrollUl" style="top:0">
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>陈先生 150****1027</span>
+                                    <p>最近一段时间非常的烦躁，迷茫，不知所谓。在听到老师的忠言之后依此而行之，调整自己的床头方向，佩戴吉祥物等。运势有了很大的改观，生活，工作渐渐有起色。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>林女士 186****4950</span>
+                                    <p>常年如一日的做同样事情，对未来感到彷徨。通过八字命运精批准确的知道自己近一年并不是大运，转运就明年此时，重新燃起对未来的希望，信心，工作也倍儿出色，竟受到领导赏识，提拔升任主管了。
+								</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>何女士 180****6084</span>
+                                    <p>事业和感情方面都分析的很对，听取了老师的建议之后换了一份工作，和同事们相处的很融洽，而且还遇到了自己的另一半，希望明年能够顺利结婚！</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>秦先生 186****8082</span>
+                                    <p>我喜欢私企上班，自己打拼，家里人却觉得公务员稳定才更适合。通过在线命理老师的分析指导，我知道自己的八字官印相生，在政府部门上班发展前景很好，但却不适合私企，听取老师的建议后，我考取了公务员，入职后一切都很顺利。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>李先生 138****7761</span>
+                                    <p>老师说我赚钱比较辛苦，正财有利，偏财则不理想。原来自己把心思花到偏财上去了，听从老师建议，自己做生意不过于冒进，以稳为主，这一年来安稳度过。现在生意蒸蒸日上，不仅挽回了上一年的损失，还为生意扩张积累了更多资本。
+								</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>张女士 150****9251</span>
+                                    <p>和丈夫恋爱时很甜蜜，婚后天天吵架，日子过的不顺心，老师说我自己今年运势不佳，万事不顺，心情烦躁，一点小事就引起口角，经过老师开解，运势有了极大改善，万事如意，心情舒畅，夫妻感情也逐渐和谐了。
+								</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>孙先生 186****7645</span>
+                                    <p>爱情部分说的很准，自已已经单身很多年了，以为很难会遇到自己的真爱，测完后听了老师的指点，结果真的遇到自己的真命天女，现在我已经告别单身狗行列了！</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>黄先生 133****2107</span>
+                                    <p>我的性格和测算中说的一摸一样，自己在感情和事业上都是犹豫不决，还好有老师的建议，现在我已经通过公司的考核成为主管了，谢谢老师！</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>周女士 180****6723</span>
+                                    <p>这个真的好准，如老师所说今年确实因为意外耗费了一大笔钱财，自己因为工作原因身体也出了问题，希望按照老师的建议做，能早日康复，生活回到正轨。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>赵女士 150****5560</span>
+                                    <p>最近一段时间非常的烦躁，迷茫，不知所谓。在听到老师的忠言之后依此而行之，调整自己的床头方向，佩戴吉祥物等。运势有了很大的改观，生活，工作渐渐有起色。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>尤先生 138****3772</span>
+                                    <p>听人说房屋朝向最好是能根据自己的八字五行来选择，特地请教了老师，最终选择了一套坐北朝南的别墅。如今不仅家庭和睦，事业也蒸蒸日上。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>邹小姐 150****5358</span>
+                                    <p>原来我是做行政工作的，在公司地位并不重要，为此为未来而迷茫。通过八字命运精批准确的知道自己近一年并不是大运，转运就明年此时，再得到大师的忠言。重新燃起对未来的希望，信心，工作也倍儿出色，竟受到领导赏识，升职了。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>任先生 186****1311</span>
+                                    <p>通过该测算得知自己最近3个月的运势不佳，在霉运的干扰下才感觉万事不顺。在听到大师的忠言之后依此而行之，调整自己的床头方向，佩戴吉祥物等。运势有了很大的改观，生活，工作渐渐有起色。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>薛女士 138****8501</span>
+                                    <p>开了个中档次的服装店生意一直不好。听从老师建议以后对店铺进行了装修改造，现在生意真是越来越火爆！谢谢命理老师！谢谢！</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="fl bzjp_b_pic">
+                                    <img src="/statics/ffsm/bazijingpi/2/images/icon_tx.png" alt="头像"/>
+                                </div>
+                                <div class="fr bzjp_b_txt">
+                                    <span>姚女士 150****7699</span>
+                                    <p>和相处了2年的男朋友分手之后很沮丧，后来听了老师的解析，了解了自己的姻缘运势，现在只想沉下心来好好工作，希望能像老师说的早日碰到适合自己的另一半。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 底部悬浮 -->
+                    <div class="suspension_fill" id="bottomShowHide">
+                        <form class="J_ajaxForm" action="post.html" method="post">
+                            <div class="sf_content w960">
+                                <div class="sf_c_list fl">
+                                    <span class="t">您的姓名：</span>
+                                    <input type="text" name="username" class="input"/>
+                                </div>
+                                <div class="sf_c_list fl">
+                                    <span class="t">性别：</span>
+                                    <div class="sel J_selectChoice">
+                                        <span class="J_selectChoiceCon">男</span>
+                                        <select name="gender">
+                                            <option value="1">男</option>
+                                            <option value="0">女</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="sf_c_list fl">
+                                    <span class="t">生日：</span>
+                                    <input type="text" id="birthday_b" data-input-id="b_input_b" class="J_date input" data-type="1" value="" placeholder="请选择日期"/>
+                                    <input type="hidden" name="birthday" id="b_input_b">
+                                </div>
+                                <div class="sf_c_list fl">
+                                    <span class="t">时辰：</span>
+                                    <div class="sel sel_sc J_selectChoice">
+                                        <span class="J_selectChoiceCon">时辰不清楚</span>
+                                        <select class="sel" name="hour">
+                                            <option value="" selected>时辰不清楚</option>
+                                            <option value="0">子时 0点</option>
+                                            <option value="1">丑时 1点</option>
+                                            <option value="2">丑时 2点</option>
+                                            <option value="3">寅时 3点</option>
+                                            <option value="4">寅时 4点</option>
+                                            <option value="5">卯时 5点</option>
+                                            <option value="6">卯时 6点</option>
+                                            <option value="7">辰时 7点</option>
+                                            <option value="8">辰时 8点</option>
+                                            <option value="9">巳时 9点</option>
+                                            <option value="10">巳时 10点</option>
+                                            <option value="11">午时 11点</option>
+                                            <option value="12">午时 12点</option>
+                                            <option value="13">未时 13点</option>
+                                            <option value="14">未时 14点</option>
+                                            <option value="15">申时 15点</option>
+                                            <option value="16">申时 16点</option>
+                                            <option value="17">酉时 17点</option>
+                                            <option value="18">酉时 18点</option>
+                                            <option value="19">戌时 19点</option>
+                                            <option value="20">戌时 20点</option>
+                                            <option value="21">亥时 21点</option>
+                                            <option value="22">亥时 22点</option>
+                                            <option value="23">子时 23点</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="public_btn_s">
+                                    <a href="javascript:;" class="sf_c_btn fl J_ajaxSubmit">立即测算</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="J_tabConItem tab_content" style="display: none;">
+                    <div class="public_order_search">
+                        <p class="public_os_words">我的测算：</p>
+                        <div class="public_os_form">
+                            <form class="J_ajaxForm" action="http://sm.jiateng666.cn/inquiry/" method="post">
+                                <input class="public_os_input" type="text" name="keyword" nolocal="true" placeholder="请输入手机号或者订单号进行查询"/>
+                                <a href="javascript:;" class="public_os_btn J_ajaxSubmit">开始查询</a>
+                            </form>
+                        </div>
+                        <div class="public_os_tips">
+                            <h4>友情提示：</h4>
+                            <p>1、直接支付我的测算仅供测算过的用户查询相关订单。如果您尚未测算，可以点击进行测算。</p>
+                            <p>2、您可以输入您测算时的订单号进行查询。</p>
+                            <p>3、测算订单号是您测算成功后在页面上方显示的唯一编号，并非支付宝交易订单号，请注意输入时相互区别。</p>
+                        </div>
+                        <a href="javascript:;" class="public_os_feedback" id="feedbackShowBtn">问题反馈</a>
+                    </div>
+                    <div class="public_feedback_popup" id="feedbackPopupWrap">
+                        <div class="public_fp_content">
+                            <p class="public_fp_title">
+                                售后申请单 <span class="public_fp_close" id="feedbackPopuClose"></span>
+                            </p>
+                            <div class="public_fp_form">
+                                <p class="public_fp_tip">温馨提示：未付款订单只能通过订单号查询，已付费测算可通过绑定手机号查看。</p>
+                                <form class="J_ajaxForm" action="http://sm.jiateng666.cn/feedback/send.html" method="post">
+                                    <div class="public_fp_box">
+                                        <span class="public_fp_tname">姓名：</span>
+                                        <input type="text" name="username" placeholder="测算人姓名" class="public_fp_input"/>
+                                    </div>
+                                    <div class="public_fp_box">
+                                        <span class="public_fp_tname">付款时间：</span>
+                                        <input type="text" name="payment_time" nolocal="true" id="payDatetime" placeholder="付款时间" class="public_fp_inputsel"/>
+                                    </div>
+                                    <div class="public_fp_box">
+                                        <span class="public_fp_tname">测算服务名：</span>
+                                        <input type="text" name="servers_name" value="八字精批" nolocal="true" placeholder="测算服务名" class="public_fp_input">
+                                    </div>
+                                    <div class="public_fp_box">
+                                        <span class="public_fp_tname">联系方式：</span>
+                                        <div class="public_fp_radio" id="contactType">
+                                            <input class="radio" type="radio" name="contact_type" value="1" contact_name="contact_wx" checked/>
+                                            微信&emsp;<input class="radio" type="radio" name="contact_type" value="2" contact_name="contact_qq"/>
+                                            QQ
+                        <input class="input" type="text" id="contactText" name="contact_wx" placeholder="您的QQ账号或微信账号"/>
+                                            <p>请务必填写正确的QQ账号或微信账号，方便客服联系您。</p>
+                                        </div>
+                                    </div>
+                                    <div class="public_fp_box">
+                                        <span class="public_fp_tname">绑定手机号：</span>
+                                        <input type="text" name="contact_phone" placeholder="您绑定的手机号码 " class="public_fp_input"/>
+                                    </div>
+                                    <div class="public_fp_box J_public_select">
+                                        <span class="public_fp_tname">问题类型：</span>
+                                        <div class="public_fp_sel J_selectChoice">
+                                            <span class="J_selectChoiceCon">已付费，未查询到付费结果</span>
+                                            <select id="feedbackType" name="typeid">
+                                                <option value="1" selected>已付费，未查询到付费结果</option>
+                                                <option value="0">其它</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="public_fp_box" id="feedbackTextarea" style="display: none;">
+                                        <span class="public_fp_tname"></span>
+                                        <textarea class="public_fp_textarea" placeholder="请具体描述您遇到的问题" name="content" maxlength="40"></textarea>
+                                    </div>
+                                    <div class="public_fp_btn">
+                                        <a href="javascript:;" class="J_ajaxSubmit">确认申请</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="protocol_pop_box" id="protocolPopBox">
+            <div class="ppb_content">
+                <div class="ppb_title">个人隐私协议</div>
+                <div class="ppb_text">
+                    <p>尊敬的用户，欢迎阅读本协议：</p>
+                    <p>瑞杰网络依据本协议的规定提供服务，本协议具有合同效力。您必须完全同意以下所有条款，才能保证享受到更好的瑞杰网络服务。您使用服务的行为将视为对本协议的接受，并同意接受本协议各项条款的约束。</p>
+                    <p>
+                        用户在申请瑞杰网络服务过程中，需要填写一些必要的个人信息，为了更好的为用户服务，请保证提供的这些个人信息的真实、准确、合法、有效并注意及时更新。<strong>若因填写的信息不完整或不准确，则可能无法使用本服务或在使用过程中受到限制。如因用户提供的个人资料不实或不准确，给用户自身造成任何性质的损失，均由用户自行承担。</strong>
+                    </p>
+                    <p>
+                        保护用户个人信息是瑞杰网络的一项基本原则，瑞杰网络运用各种安全技术和程序建立完善的管理制度来保护用户的个人信息，以免遭受未经授权的访问、使用或披露。<strong>未经用户许可瑞杰网络不会向第三方（瑞杰网络控股或关联、运营合作单位除外）公开、透露用户个人信息，但由于政府要求、法律政策需要等原因除外。</strong>
+                    </p>
+                    <p>
+                        在用户发送信息的过程中和本网站收到信息后，<strong>本网站将遵守行业通用的标准来保护用户的私人信息。但是任何通过因特网发送的信息或电子版本的存储方式都无法确保100%的安全性。因此，本网站会尽力使用商业上可接受的方式来保护用户的个人信息，但不对用户信息的安全作任何担保。</strong>
+                    </p>
+                    <p>
+                        此外，您已知悉并同意：<strong>在现行法律法规允许的范围内，瑞杰网络可能会将您非隐私的个人信息用于市场营销，使用方式包括但不限于：在网页或者app平台中向您展示或提供广告和促销资料，向您通告或推荐服务或产品信息，使用电子邮件，短信等方式推送其他此类根据您使用瑞杰网络服务或产品的情况所认为您可能会感兴趣的信息。</strong>
+                    </p>
+                    <p>
+                        本网站有权在必要时修改服务条例，<strong>本网站的服务条例一旦发生变动，将会在本网站的重要页面上提示修改内容，用户如不同意新的修改内容，须立即停止使用本协议约定的服务，否则视为用户完全同意并接受新的修改内容。</strong>
+                        根据客观情况及经营方针的变化，本网站有中断或停止服务的权利，用户对此表示理解并完全认同。
+                    </p>
+                    <p>如果您还有其他问题和建议，可以通过电子邮件8873336@qq.com或者电话4006929122联系我们。</p>
+                    <p>瑞杰网络保留对本协议的最终解释权。</p>
+                </div>
+                <div class="ppb_close" id="protocolHideBtn">
+                    <b>关闭</b>
+                </div>
+            </div>
+        </div>
+        <div class="public_footer">
+            <p>65测算网</p>
+            <p>客服7x24小时在线</p>
+        </div>
+        <div style="display: none">
+            <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+        </div>
+        <script type="text/javascript" src="/statics/ffsm/public/pc/layui/layui.js"></script>
+        <script type="text/javascript" src="/statics/ffsm/public/pc/extends/common.min.js"></script>
+        <script type="text/javascript" src="/statics/ffsm/bazijingpi/2/bazijingpi.min.js"></script>
+    </body>
+</html>

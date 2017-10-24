@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="applicable-device" content="mobile">
+<meta name="format-detection" content="telephone=no">   
+<meta name="viewport" content="width=720,width=device-width, initial-scale=1,  initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<title>八字起名</title>
+<script>
+(function (doc, win) {
+	var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		var clientWidth = docEl.clientWidth;
+		//alert(clientWidth)
+		if (!clientWidth) return;
+			var fts = clientWidth /10;
+			if(fts<32){
+				fts=32;
+			}else if(fts>72){
+				fts=72;
+			}
+			docEl.style.fontSize = fts + 'px';
+		};
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" href="css\style.css">
+<link rel="stylesheet" href="css\qiming.css">
+<script src="js\jquery.js"></script>
+<script src="js\daySelect.js?ver=1"></script>
+<script src="js\qiming.js?ver=1"></script>
+
+<script src="js\calendar.min.js?ver=1"></script>
+<script src="js\main.js?ver=2"></script> 
+<script src="js/inputSuggest_0.1.js"></script> 
+</head>
+<body class="qm">
+<div class="wrap ov">
+	<header class="sm_hd">
+		<h3 class="smTitle">八字起名</h3>
+	</header> 
+	<script> 
+	$(document).ready(function(e) {
+        $(".sm_nav>li>a").each(function(index, element) {
+            $(this).click(function(){
+				var obj = $(this).attr("data-for");
+				//console.log("当前对象"+obj);
+				if(obj=="qmIntro"){
+					//八字起名
+					$(".queryBox").hide();
+					$("#queryBox_btn").removeAttr("class");
+				}else{
+					//订单查询
+					$(".qmIntro").hide();
+					$("#qmIntro_btn").removeAttr("class");
+				}
+				$("."+obj).show();
+				$(this).attr("class","active");
+			});
+        });
+		
+		
+		//初始化输入邮箱补全
+		/*var sinaSuggest = new InputSuggest({  
+			opacity: 0.8,
+			input: document.getElementById("phone"),
+			data: ["qq.com"],
+			initFun:function(){
+				if($("#tip_box").attr("id")=="tip_box"){ 
+					$("#tip_box").remove();
+					clearTimeout($("div").data("tip_box_close_t"));
+				}
+			}
+		});	 */
+    });
+	</script> 
+<link rel="stylesheet" href="css\calendar.css">
+<script src="js\cookie.js"></script>
+<script src="js\ntog.js"></script>
+
+<div class="sm_banner"><img src="images\qm_banner.jpg" alt=""></div>
+<ul class="clearfix sm_nav">
+		<li><a href="javascript:;" class="active" data-for="qmIntro" id="qmIntro_btn">八字起名</a></li>
+		<li><a href="cx\index.htm" data-for="queryBox" id="queryBox_btn">订单查询</a></li>
+	</ul>
+    <!--<div class="queryBox" style="display:none;">
+		<div class="queryWrap">
+			<input type="text" placeholder="请输入订单号" name="" id="ordernums" class="queryTxt animated" readonly>
+			<input type="submit" value="查询" class="queryBtn" id="query">
+			<script>
+			$("#query").click(function(){
+				var onum=$("#ordernums").val();
+				if(onum==''){
+					$("#ordernums").addClass('shake');
+					clearshake();
+					return;
+				} 
+			})
+			</script>
+		</div>
+		<div class="queryTips">
+		<span>温馨提示：</span>查询订单请加微信：<a style="color:red">qm88885</a>。
+		</div>
+	</div>
+    
+	<div class="qmIntro" style="background:#FFF;padding:1.2rem 0;">
+    	<div class="dsJianjie clearfix">
+        <div class="l tc">
+        	<img src="images/img9.jpg" style="width:100%;" />
+        	<span style="display:block;margin-top:0.6rem;">孙弘均</span>
+        </div>
+        <div class="r">
+        	<span class="t tc">大师简介</span>
+            <div style="font-size:0.444rem;">
+            <span class="t1">了解更多加孙弘均老师微信86127901</span>
+            周易起名网首席起名大师，从事易学研究四十年，擅长宝宝起名、个人改名、八字排盘、紫薇斗数、择日风水
+            </div>
+        </div>
+        </div>
+    </div>-->
+	<div class="qmIntro">
+		<ul class="qmIntroList">
+			<li>正宗算法·精确计算五行含量</li>
+			<li>喜用神·需要什么则补什么</li>
+			<li>传承经典 去伪存真</li>
+			<li>优美、吉祥美名</li>
+		</ul>
+		<p class="qmIocn">参考国学经典,易经,诗经,唐诗,宋词等著作</p>
+	</div>
+	<div class="sm_form">
+		<div class="qmTitle"><h4 class="qmIocn">起名必填信息</h4></div>
+		<div class="qm_form_2">
+			<span class="qm_form_bd qm_form_t_l"></span>
+			<span class="qm_form_bd qm_form_t_r"></span>
+			<span class="qm_form_bd qm_form_b_l"></span>
+			<span class="qm_form_bd qm_form_b_r"></span>
+			<form action="pay/index.asp" class="form_c">
+				<ul>
+					<li>
+						<span class="sm_form_name"><i></i>姓氏：</span>
+						<div class="sm_form_txt">
+							<input class="animated" style="width:100%;float:left" type="text" id="smname" name="surname" placeholder="请输入姓氏" value="">
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>性别：</span>
+						<div class="sm_form_txt sm_form_sex">
+							<span class="cur" data-value="1"><i></i><font>男</font></span>
+							<span data-value="0"><i></i><font>女</font></span>
+							<input type="hidden" name="sex" id="gender" value="1">
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>出生日期：</span>
+						<div class="sm_form_txt">
+							<span class="icon_right"></span>
+							<input type="text" id="birthday" data-input-id="b_input" class="Js_date animated" data-type="0" value="" placeholder="请选择您的生日" data-date="2017-06-12">
+							<input type="hidden" name="birthday" id="b_input" value="">
+                            <script>
+							var ddte = new Date();
+							var curr_d = ddte.getFullYear()+"-"+(ddte.getMonth()+1)+"-"+ddte.getDate();
+							$("#birthday").attr("data-date",curr_d);
+							//console.log("日期"+curr_d);
+							</script>
+                             
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>出生时辰：</span>
+						<div class="sm_form_txt">
+							<!--<div class="clearfix sec_txt fl">-->
+								<select align="center" class="sel fl hoerSec" name="hour" id="hour">
+								</select>
+								<label for="hour" class="fl">时</label>
+							<!--</div>
+							<div class="clearfix sec_txt fl">-->
+								<select name="minutes" id="minutes" class="sel fl minutesSel">
+								</select>
+								<label for="minutes" class="fl" style='padding:0'>分</label>
+							<!--</div>-->
+						</div>
+					</li>
+					<!--<li>
+						<span class="sm_form_name"><i></i>联系手机：</span>
+						<div class="sm_form_txt">
+							<span class="icon_right"></span> 
+							<input type="text" name="phone" id="phone"  style="font-size:12px;" value="" placeholder="如：135********">
+                             
+						</div>
+					</li>
+					-->
+				</ul>
+			</form>
+				<div class="sm_btn m_b_36">
+					 
+
+					<p class=""><a href="javascript:;" id="cs"><i class="qmIocn">立即起名</i></a></p>
+					<p class="item_num">已有<span id="tjs">9559249</span>人选择智能起名，<font color="red">98.3%</font>好评</p>
+					<p class="item_num" id="weiixn_num">加老师微信： 免费咨询起名知识</p>
+					<!--<script>
+					$.get('sm/tj',{_d:(+new Date())},function(d){
+						$("#tjs").text(d)
+					})
+					</script>-->
+				</div>
+		</div>
+	</div>
+	<script>
+		var $Hour = $('#hour');
+		var $Minutes = $('#minutes');
+		var def_day = '--';
+		var	def_value = 0;
+		var str = '<option value="'+def_value+'" selected>'+def_day+'</option>';
+		$Hour.append(str);
+		$Minutes.append(str);
+
+        for(var i=0; i<24; i++){
+			var hStr = '<option value="'+i+'">'+i+'</option>';
+			$Hour.append(hStr);
+        }
+        //分
+        for(var i=0; i<60; i++){
+			var minStr = '<option value="'+i+'">'+i+'</option>';
+			$Minutes.append(minStr);
+        }
+	</script>
+
+	
+	<div class="sm_banner m_b_24"><img src="images\qm_smBanner.jpg" alt=""></div>
+	<div class="qmAnli">
+		<div class="qmAnliTitle qmAliCon clearfix">
+			<h4 class="fl qnAl_left ribbon ribbon_left">八字起名</h4>
+			<h4 class="fr qnAl_right ribbon ribbon_right">其他机构</h4>
+		</div>
+		<p class="qmAnliTime qmAliCon">(案例：女子  公历生日 2015年8月25日 15点30分)</p>
+		<div class="qmAl_bazi qmAliCon clearfix m_b_24">
+			<div class="qmAlName">八字</div>
+			<div class="qnAl_left fl">
+				<table width="100%">
+					<tr>
+						<th>年</th>
+						<th>月</th>
+						<th>日</th>
+						<th>时</th>
+					</tr>
+					<tr>
+						<td>乙木</td>
+						<td>甲木</td>
+						<td>癸水</td>
+						<td>庚金</td>
+					</tr>
+					<tr>
+						<td>未土<i>己</i></td>
+						<td>申金<i>庚</i></td>
+						<td>酉金<i>辛</i></td>
+						<td>申金<i>庚</i></td>
+					</tr>
+				</table>
+			</div>
+			<div class="qnAl_right fr">
+				<table width="100%">
+					<tr>
+						<th>年</th>
+						<th>月</th>
+						<th>日</th>
+						<th>时</th>
+					</tr>
+					<tr>
+						<td>乙木</td>
+						<td>甲木</td>
+						<td>癸水</td>
+						<td>庚金</td>
+					</tr>
+					<tr>
+						<td>未土</td>
+						<td>申金</td>
+						<td>酉金</td>
+						<td>申金</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="qmAl_hanliang qmAliCon clearfix m_b_24 ribBox">
+			<div class="qmAlName">含量</div>
+			<div class="qnAl_left fl">
+				<h4 class="ribbon ribbon_left"><span>正宗算法精确计算五行含量</span></h4>
+				<ul class="hanlinag">
+					<li><b>金</b><span></span><i>54.62%</i></li>
+					<li><b>水</b><span></span><i>22.64%</i></li>
+					<li><b>木</b><span></span><i>9.47%</i></li>
+					<li><b>火</b><span></span><i>3.24%</i></li>
+					<li><b>土</b><span></span><i>10.05%</i></li>
+				</ul>
+			</div>
+			<div class="qnAl_right fr">
+				<h4 class="ribbon ribbon_right"><span>业余水平简单相加五行含量</span></h4>
+				<ul class="hanlinag">
+					<li><b>金</b>4个</li>
+					<li><b>水</b>1个</li>
+					<li><b>木</b>2个</li>
+					<li><b>火</b>0个</li>
+					<li><b>土</b>1个</li>
+				</ul>
+			</div>
+		</div>
+		<div class="qmAl_xiji qmAliCon clearfix m_b_24 ribBox">
+			<div class="qmAlName">喜忌</div>
+			<div class="fl qnAl_left">
+				<h4 class="ribbon ribbon_left"><span>需要什么则补什么（运算复杂），喜用神选择正确</span></h4>
+				<div class="xjFenxi">分析：日主水的力量比较中和（22.46%）。印星金 偏旺、财星火弱，取食伤木耗印星金的力量，并且 食伤木生财星火。财星火为第二补救。</div>
+				<p>喜用神：木火</p>
+				<p>忌神：金土水</p>
+			</div>
+			<div class="fr qnAl_right">
+				<h4 class="ribbon ribbon_right"><span>缺什么就补什么（运算简单），喜用神选错两个</span></h4>
+				<div class="xjFenxi">分析：此八字金多、木多；火最弱；水土各一个，所以 此八字需要补火土水这三个五行，以达到八字的平衡。</div>
+				<p>喜用神：火土水</p>
+				<p>忌神：金木</p>
+			</div>
+		</div>
+		<div class="qmAl_xuanzi qmAliCon clearfix m_b_24 ribBox">
+			<div class="qmAlName">选字</div>
+			<div class="fl qnAl_left">
+				<h4 class="ribbon ribbon_left"><span>喜用神正确,甄选出来的汉字全部对你有利</span></h4>
+				<p>木：蓓彬颂莲绮芳菲芙果皓蕙婕兰琪蕊... ...</p>
+				<p>火：诺绰黛丹迪宁缇瑾乐凌龄晴甜焱昭婷... </p>
+			</div>
+			<div class="fr qnAl_right">
+				<h4 class="ribbon ribbon_right"><span>喜用神错误,甄选出来的大部分汉字对你有害</span></h4>
+				<p>火：诺绰黛丹迪宁缇瑾乐凌龄晴甜焱昭婷... </p>
+				<p>土：安辰岚娴亚燕旖瑛羽园玥... </p>
+			</div>
+		</div>
+		<div class="qmAl_pingfen qmAliCon clearfix m_b_24 ribBox">
+			<div class="qmAlName">评分</div>
+			<div class="fl qnAl_left">
+				<h4 class="ribbon ribbon_left"><span>三才五格精准评分,从各方面展示名字在三才五格方面的助运效果,助运指数一目了然</span></h4>
+				<ul class="pingfen">
+					<li class="clearfix"><span class="pfName">三才配置<i>(健康)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+					<li class="clearfix"><span class="pfName">基础运<i>(环境)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+					<li class="clearfix"><span class="pfName">成功运<i>(事业)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+					<li class="clearfix"><span class="pfName">社交运<i>(机遇)</i></span><span class="pfNum"><i style="width: 95%;">95</i></span></li>
+					<li class="clearfix"><span class="pfName">天格<i>(遗传)</i></span><span class="pfNum"><i style="width: 80%;">80</i></span></li>
+					<li class="clearfix"><span class="pfName">人格<i>(才华)</i></span><span class="pfNum"><i style="width: 90%;">90</i></span></li>
+					<li class="clearfix"><span class="pfName">地格<i>(家庭)</i></span><span class="pfNum"><i style="width: 95%;">95</i></span></li>
+					<li class="clearfix"><span class="pfName">总格<i>(财富)</i></span><span class="pfNum"><i style="width: 85%;">85</i></span></li>
+					<li class="clearfix"><span class="pfName">外格<i>(朋友)</i></span><span class="pfNum"><i style="width: 90%;">90</i></span></li>
+				</ul>
+			</div>
+			<div class="fr qnAl_right">
+				<h4 class="ribbon ribbon_right"><span>采用传统数字展示，晦涩难懂，不能直接表示具体含义。</span></h4>
+				<ul class="pingfen">
+					<li class="clearfix"><span class="pfName">三才配置<i>(健康)</i></span><span class="pfNum">60</span></li>
+					<li class="clearfix"><span class="pfName">基础运<i>(环境)</i></span><span class="pfNum">32</span></li>
+					<li class="clearfix"><span class="pfName">成功运<i>(事业)</i></span><span class="pfNum">40</span></li>
+					<li class="clearfix"><span class="pfName">社交运<i>(机遇)</i></span><span class="pfNum">24</span></li>
+					<li class="clearfix"><span class="pfName">天格<i>(遗传)</i></span><span class="pfNum">21</span></li>
+					<li class="clearfix"><span class="pfName">人格<i>(才华)</i></span><span class="pfNum">32</span></li>
+					<li class="clearfix"><span class="pfName">地格<i>(家庭)</i></span><span class="pfNum">17</span></li>
+					<li class="clearfix"><span class="pfName">总格<i>(财富)</i></span><span class="pfNum">8</span></li>
+					<li class="clearfix"><span class="pfName">外格<i>(朋友)</i></span><span class="pfNum">26</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div>
+		<p class="qm_shouj qmIocn">首家将“五格、三才、三运”九项吉凶转换为</p>
+		<h3 class="qm_qjdf">精确得分</h3>
+	</div>
+	<div class="sm_banner m_b_45"><img src="images\qm_img.jpg" alt=""></div>
+	<div class="qm_lc">
+		<h4 class="qm_lc_title">起名流程</h4>
+		<p class="qm_lc_temp">填写起名资料</p>
+		<span class="qm_lc_btn"></span>
+		<p class="qm_lc_temp">下单付款</p>
+		<span class="qm_lc_btn"></span>
+		<p class="qm_lc_temp">老师分析八字命理</p>
+		<span class="qm_lc_btn"></span>
+		<p class="qm_lc_temp">老师根据八字命理起名</p>
+		<span class="qm_lc_btn"></span>
+		<p class="qm_lc_temp">在线立即选取吉祥美名</p>
+	</div>
+
+	<div class="comment">
+		<div class="qmTitle"><h4 class="qmIocn">客户评论</h4></div>
+		<ul class="commList">
+			<li>
+				<h5>CS17***7892 评论：</h5>
+				<p>有很多好名字供选择，五行评分一目了然，几分钟就选好了满意的名字</p>
+			</li>
+			<li>
+				<h5>CS17***2534 评论：</h5>
+				<p>周易起名网的名字大气时尚，寓意很好，非常喜欢小名叫起来朗朗上口，现在小孩还太小，但是一家人都是拿着小名在逗他，好像宝宝已经会听懂话似的，这种感觉真的非常好；非常非常感谢你们！</p>
+			</li>
+			<li>
+				<h5>CS17***0128 评论：</h5>
+				<p>名字评分都很高，原来好名字是那么多的，先前自己想了很久也没想出来，选择周易起名网省时省力。</p>
+			</li>
+		</ul>
+
+	</div>
+
+<script>
+            $(".commList h5").each(function(){
+            	var v = $(this).text();
+            	$(this).text(v.replace("CS17","SHJ"));
+           	});
+    var master="";
+    $(function(){
+        $("#master a").click(function(){
+            $("#master img").addClass('gray');
+            $(this).find("img").removeClass('gray');
+            master=($(this).attr('name') );
+        })
+		
+		$("#cs").click(function(){
+			cs();
+		})
+
+		var id=0;
+		master='dong';
+		 
+	
+    })
+
+	function getRandomInt(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min)) + min;
+	}
+
+	function cs(){
+		if($('#agree').prop('checked')===false){
+			$("#agreebox").addClass('shake');next=false;clearshake();return;
+		}
+
+		$("#smname").val($("#smname").val().replace(/[^\u4E00-\u9FA5]/g,''));
+		 
+		if($("#smname").val()=='' || $("#smname").val().length>2){
+			 $("#smname").addClass('shake');next=false;clearshake();return;
+		}
+		if($("#b_input").val()==''    )	{
+			 $("#birthday").addClass('shake');next=false;clearshake();return;
+		}
+		/*if($("#phone").val()==''){
+			alert("请填写联系方式")
+			 $("#phone").addClass('shake').focus();next=false;clearshake();return;
+		}*/
+		var xm=$("#smname").val();
+		var o={};
+			o.name=xm;
+			o.gender=$("#gender").val();
+			o.birthday=$("#b_input").val();
+			o.xing=xm;
+			o.ming='';
+			o.birthtime=$("#hour").val();
+			o.birthmin=$("#minutes").val(); 
+			o.phone= "";//$("#phone").val();
+			o.ver=$("#ver").val();
+		var next=true;
+		 
+		if(!next){
+			clearshake();return;
+		}
+		//$("#form_c").submit();
+		location.href="pay/?"+$.param(o);
+
+		//console.log(o);
+
+
+	}
+	function clearshake(){
+		setTimeout(function(){$(".shake").removeClass('shake');},2000)
+	}
+
+</script>
+
+
+	<script>
+ 	var formTop = $('.sm_form').eq(0);
+ 	var  ft = formTop.offset().top;
+		formTop.css({'position':'relative'});
+	var hrefs = '<div style="width: 100%; height: 1px; overflow: hidden;position: absolute; left: 0; top: -0.75rem;" id="ceForm"></div>';
+		formTop.prepend(hrefs);
+	var hTop = $('#ceForm').offset().top;
+	var fiex = ''+
+				'<div style=" width: 100%;  padding: 0.2778rem 0; position: fixed; left: 0; right: 0; bottom: 0; z-index: 99; background-color: #fff; border-top: 1px solid #f2f2f2; display:none;" class="fix">'+
+					'<a href="javascript:;" style=" display: block; width: 95%; height: 1.4444rem; margin:0 auto; max-width: 684px; text-align: center; line-height: 1.4444rem; font-size: 0.5rem; color: #fff; background-color: #c78e44; border-radius: 0.7222rem;"><i class="qmIocn">立即测算</i></a>'+
+				'</div>';
+	var fixDiv = '<div style="width:100%; height:2rem;" class="fixDiv"></div>';
+	$('body').append(fiex).append(fixDiv);
+	$(window).scroll(function(){
+		var docTop = $(this).scrollTop()-20;
+		if(docTop>=hTop){
+			$('.fixDiv').show();
+			$('.fix').show();
+		}else{
+			$('.fixDiv').hide();
+			$('.fix').hide();
+		}
+	});
+	$('.fix').click(function(){
+		var t = $('#ceForm').offset().top;
+		//console.log(t)
+		$(window).scrollTop(t);
+		$('.fixDiv').hide();
+		$('.fix').hide();
+	});
+
+
+    var qmC = $('.ribBox');
+    qmC.each(function(){
+    	var ribbon = $(this).find('.ribbon');
+    	var r_span = $(this).find('.ribbon span');
+    	var h = 0;
+    	r_span.each(function(){
+    		if($(this).outerHeight()> h){
+    			h = $(this).outerHeight();
+    		}
+    	});
+    	r_span.outerHeight(h);
+    	var bd_w = parseInt(h/2);
+    	r_span.css({'top':-bd_w});
+    	ribbon.css({'border-top-width': bd_w, 'border-bottom-width':bd_w});
+    });
+
+
+//设置用户首次微信cookie
+function setCookie(name,value,time){
+	var strsec = getsec(time);
+	var exp = new Date();
+	exp.setTime(exp.getTime() + strsec*1);
+	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+function getsec(str){
+	var str1=str.substring(1,str.length)*1;
+	var str2=str.substring(0,1);
+	if (str2=="s"){
+		return str1*1000;
+	}else if (str2=="h"){
+		return str1*60*60*1000;
+	}else if (str2=="d"){
+		return str1*24*60*60*1000;
+	}
+}
+//获取cookie
+function getCookie(name){
+	var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+	if(arr=document.cookie.match(reg))
+		return unescape(arr[2]);
+	else
+		return null;
+}
+var randNum = Math.round(Math.random()*2);
+
+var weixinArr = ['qiming8886','qiming88666','quming8866'];
+//如果没有获取到cookie  则生成cookie
+if(getCookie('weixin')){
+	$('#weiixn_num').html('加老师微信：'+getCookie('weixin')+' 免费咨询起名知识');
+}else{
+	setCookie("weixin",weixinArr[randNum],"d365");
+	$('#weiixn_num').html('加老师微信：'+weixinArr[randNum]+' 免费咨询起名知识');
+}
+
+
+
+
+</script>
+</div></body>
+</html> 
+<div class="wrap">
+
+<div style='text-align:center;font-size:0.3rem;'><br>
+
+</div>
+<!--底部信息-->
+ 
+<!--底部信息-->
+
+	<div id="footInfo" style='font-size:0.353rem;margin-top:0.5rem;text-align:center;/*color:#CCA578*/color:#fff;'>
+    	
+    	<script src="js\foots.js"></script>
+    
+        
+        
+        
+    </div>
+    
+     
+    <div class="wrap" style="height:0.5rem;">
+
+</div>
+<!--订单信息 开始-->	
+	<div id='myorderlist' style='width:2rem;position: fixed;bottom: 2rem;right: 1rem;z-index:9999999'>
+		<a href='history'><img style='width:100%' src='images\myorder.png'></a>
+	</div>
+	<script>
+	$(function(){
+		if(localStorage['orders']===undefined){
+			$('#myorderlist').hide();
+		}
+	})
+	</script>
+    <script src="js\localdata.js"></script>
+<!--订单信息 结束-->
+<div style='display:none'> 
+
+
+<div style='display:none'> 
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+		
+</div>
+
+
+ </div>

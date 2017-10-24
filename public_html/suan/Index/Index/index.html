@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>周易算命网</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="..\..\Public\Index\css\wap.min.css" rel="stylesheet" type="text/css">
+    <link href="..\..\Public\Index\css\bazijingpi.min.css" rel="stylesheet" type="text/css">
+    <link href="..\..\Public\Index\css\calendar.css" rel="stylesheet" type="text/css">
+    <script src="..\..\Public\Index\js\jquery-1.7.2.min.js"></script>
+    <script src="..\..\Public\Index\js\jquery-ui.min.js"></script>
+    <script src="..\..\Public\Index\js\daySelect.js?ver=1"></script>
+    <script src="..\..\Public\Index\js\qiming.js?ver=1"></script>
+    <script src="..\..\Public\Index\js\calendar.min.js?ver=1"></script>
+    <script src="..\..\Public\Index\js\main.js?ver=2"></script>
+    <script src="..\..\Public\Index\js\inputSuggest_0.1.js"></script>
+    <style type="text/css">
+        .qm_form_2 {margin: 0.4167rem;}
+        .form_c{margin-top: 0.1389rem;height: auto;display: block;}
+        .form_c ul{position: relative;font-size: 0.3889rem;border: 0.0694rem solid #c29f68;background-color: #fff9db;}
+        .form_c ul li{height: 2rem;line-height:2rem;padding: 0.333rem 0;border-color: #c19d64;border-bottom: 1px solid #ddd6d1;overflow: hidden;}
+        .form_c ul li .sm_form_name{color: #a61222;font-size: 14px;float: left;margin-left:.3rem;}
+        .form_c ul li .sm_form_txt{position: relative;overflow: hidden;height: 100%;}
+        .form_c ul li .sm_form_txt .animated{border: none 0;background: none;font-size: 16px;width:100%;height: 100%;display: block;animation-fill-mode: both;animation-duration: 1s;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: both;}
+        .form_c ul li .sm_form_sex{color: #666;font-size: 16px;}
+        .sm_form_sex span{position: relative;padding-left: 1rem;width: 15%;float: left;display: block;height: 100%;}
+        .sm_form_sex span i{margin-top: -0.28rem;width: 12px;height: 12px;position: absolute;left: 0;top: 46%;background-image: url(../../Public/Index/images/qm_radio.png);background-size: 2.5rem 100%;}
+        .cur i em{display: block !important;}
+        .sm_form_sex i em{background:url(../../Public/Index/images/qm_radio.png) 1.282rem 0;background-size: 2.5rem 100%; width:12px;height:12px;position:absolute;top:0;left:0;display: none;}
+        .sm_form_txt .sel{background: none;font-size:16px;border: 1px solid #c19d64;height: 100%;}
+        .sm_form_txt .hoerSec
+        .sm_form_txt .fl{font-size:16px;padding: 0 10px;float: left;cursor: default;}
+        .sm_form_txt .minutesSel
+        .sm_btn {margin-bottom: 0.53rem;text-align: center ;}
+        #cs{background: #d23037;display: block;height: 34px;line-height: 34px;font-size: 18px;color: #fff;border-radius: 5px;-o-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-webkit-border-radius: 5px;margin:10px 10px;}
+        .item_num{font-size:12px;}
+        .auto{position: relative;border: none 0;background: none;font-size: 16px;height: 100%;display: block;animation-fill-mode: both;animation-duration: 1s;-webkit-animation-duration: 1s;-webkit-animation-fill-mode: both;}
+        .J-time{width: 100%;display: inline-block;overflow: hidden;}
+        .sel{width:100%;line-height:1.8rem;display: inline-block;overflow: hidden;border:0;color:#666;z-index: 999;position: relative;font-size:16px;}
+        .J-time:before{width:20px;height:20px;content: "";background:url(../../Public/Index/images/icon_d_arrow.jpg) no-repeat;background-size:100% 100%;position:absolute;top:22%;right:5%;}
+        .icon_right:before{width:20px;height:20px;content: "";background:url(../../Public/Index/images/icon_d_arrow.jpg) no-repeat;background-size:100% 100%;position:absolute;top:22%;right:5%;}
+        .animated{position:relative;width:100% !important;}
+    </style>
+</head>
+
+<body>
+<header class="public_header">
+    <h1 class="public_h_con">八字精批</h1>
+    <a class="public_h_home" href="#"></a>
+</header>
+<div class="public_banner"><img src="..\..\Public\Index\images\bzzy_banner.jpg" alt="八字精批"></div>
+<div class="public_bg_color">
+    <div class="public_border_title">
+        <div class="b_t_up"><span></span></div>
+        <div class="b_t_body"><span>测算老师-孙弘均简介</span></div>
+        <div class="b_t_down"><span></span></div>
+    </div>
+    <div class="master_introduction">
+        <p>孙弘均老师作为国学易学专家，潜心研习易经及各类命理经典，拥有20多年的命理测算经验，独立创办清风国学社，弘扬具有深厚底蕴的国学文化和易学文化，成为了华南地区十大风水师之一，享誉国际。</p>
+    </div>
+    <p class="rn_words" id="dianwocesuan">立即揭开八字奥秘</p>
+    <div class="sm_form">
+        <div class="qm_form_2">
+            <form action="order/" class="form_c">
+                <ul>
+                    <li>
+                        <span class="sm_form_name" id="sm_form_surname">您的姓名：</span>
+                        <div class="sm_form_txt">
+                            <input class="animated" style="width:100%;float:left" type="text" id="smname" name="surname" placeholder="请输入姓名" value="">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name">您的性别：</span>
+                        <div class="sm_form_txt sm_form_sex">
+                            <span class="cur" data-value="1"><i><em></em></i><font>男</font></span>
+                            <span data-value="0"><i><em></em></i><font>女</font></span>
+                            <input type="hidden" name="sex" id="gender" value="1">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name" id="sm_form_birthday">出生日期：</span>
+                        <div class="sm_form_txt">
+                            <span class="icon_right"></span>
+                            <input type="text" id="birthday" data-input-id="b_input" class="Js_date animated" data-type="0" value="" placeholder="请选择您的生日" data-date="1987-06-12">
+                            <input type="hidden" name="birthday" id="b_input" value="">
+
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name">出生时辰：</span>
+                        <div class="auto"><span class="auto input J-time"><select class="sel" name="hour" id="hour"><option value="" selected="">时辰不清楚<option value="0">子时 0点<option value="1">丑时 1点<option value="2">丑时 2点<option value="3">寅时 3点<option value="4">寅时 4点<option value="5">卯时 5点<option value="6">卯时 6点<option value="7">辰时 7点<option value="8">辰时 8点<option value="9">巳时 9点<option value="10">巳时 10点<option value="11">午时 11点<option value="12">午时 12点<option value="13">未时 13点<option value="14">未时 14点<option value="15">申时 15点<option value="16">申时 16点<option value="17">酉时 17点<option value="18">酉时 18点<option value="19">戌时 19点<option value="20">戌时 20点<option value="21">亥时 21点<option value="22">亥时 22点<option value="23">子时 23点</select></span></div>
+                    </li>
+                </ul>
+            </form>
+            <div class="sm_btn">
+                <div id='agreebox' style='text-align:center;font-size:14px;padding:0.2rem;'>
+                    <div class="public_agreement"><p id="input_tip">* 请填写姓名、性别、出生时间</p></div>
+                </div>
+
+                <p class=""><a href="javascript:;" id="cs" style="text-align:center">立即测算</a></p>
+                <div class="test_count J_testFixedShow"><span>已有<font>22443186</font>人测算</span></div>
+                <div class="test_count J_testFixedShow">加老师微信 <span class="red">suan8886</span> 详批命理</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var master="";
+        $(function(){
+
+            $("#master a").click(function(){
+                $("#master img").addClass('gray');
+                $(this).find("img").removeClass('gray');
+                master=($(this).attr('name') );
+            })
+
+            $("#cs").click(function(){
+                console.log(789);
+                if($('#agree').prop('checked')===false){
+                $("#agreebox").addClass('shake');next=false;clearshake();return;
+            }
+
+            $("#smname").val($("#smname").val().replace(/[^\u4E00-\u9FA5]/g,''));
+
+            if($("#smname").val()=='' || $("#smname").val().length>4){
+                $("#smname").addClass('shake');
+                next=false;
+                clearshake();
+                $("#input_tip").css('color', 'red');
+                $('#input_tip').text("* 请填写姓名");
+                $("#sm_form_surname").effect("shake",{  times: 1, distance: 6});
+                return;
+            }
+            if($("#b_input").val()=='') {
+                $("#birthday").addClass('shake');
+                next=false;
+                clearshake();
+                $("#input_tip").css('color', 'red');
+                $('#input_tip').text("* 请填写出生日期");
+                $("#sm_form_birthday").effect("shake",{  times: 1, distance: 6});
+                return;
+            }
+
+            var xm=$("#smname").val();
+            var o={};
+            o.name=xm;
+            o.gender=$("#gender").val();
+            o.birthday=$("#b_input").val();
+            o.xing=xm;
+            o.ming='';
+            o.birthtime=$("#hour").val();
+            o.birthmin=$("#minutes").val();
+            o.phone= "";//$("#phone").val();
+            o.ver=$("#ver").val();
+            var next=true;
+
+            if(!next){
+                clearshake();return;
+            }
+            $(".form_c").submit();
+//            location.href="/index/orderAdd?"+$.param(o);
+                // cs();
+            })
+
+            var id=0;
+            master='dong';
+
+
+
+        })
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function clearshake(){
+            setTimeout(function(){$(".shake").removeClass('shake');},2000)
+        }
+
+    </script>
+</div>
+<div class="public_bg_color">
+    <div class="public_border_title">
+        <div class="b_t_up"><span></span></div>
+        <div class="b_t_body"><span>测算后您将知道以下信息</span></div>
+        <div class="b_t_down"><span></span></div>
+    </div>
+    <p class="public_bzjp_box"><img src="..\..\Public\Index\images\img_bazi.jpg" alt="测算后您将知道以下信息"></p>
+</div>
+<div class="public_bg_color">
+    <div class="public_border_title">
+        <div class="b_t_up"><span></span></div>
+        <div class="b_t_body"><span>测算内容对您有什么帮助</span></div>
+        <div class="b_t_down"><span></span></div>
+    </div>
+    <p class="public_bzjp_box"><img src="..\..\Public\Index\images\img_help01.jpg" alt="测算后您将知道以下信息"><img src="..\..\Public\Index\images\img_help02.jpg" alt="测算后您将知道以下信息"></p>
+</div>
+<div class="public_bg_color">
+    <div class="public_border_title">
+        <div class="b_t_up"><span></span></div>
+        <div class="b_t_body"><span>测算用户真实反馈</span></div>
+        <div class="b_t_down"><span></span></div>
+    </div>
+    <div class="true_feedback">
+        <p class="center"><span class="red">98.6%</span>的用户通过测算</p>
+        <p class="center mb10">明确了自己的人生方向</p>
+        <ul>
+            <li><img src="..\..\Public\Index\images\img_true01.jpg" alt="#"></li>
+            <li><img src="..\..\Public\Index\images\img_true02.jpg" alt="#"></li>
+            <li><img src="..\..\Public\Index\images\img_true03.jpg" alt="#"></li>
+        </ul>
+        <div class="public_btn_s J_back_form">
+            <a href="#dianwocesuan">立即测算</a>
+        </div>
+    </div>
+</div><div class="protocol_pop_box" id="protocolPopBox">
+    <div class="ppb_content">
+        <div class="ppb_title">个人隐私协议</div>
+        <div class="ppb_text">
+            <p>尊敬的用户，欢迎阅读本协议：</p>
+            <p>周易算命网依据本协议的规定提供服务，本协议具有合同效力。您必须完全同意以下所有条款，才能保证享受到更好的周易算命网服务。您使用服务的行为将视为对本协议的接受，并同意接受本协议各项条款的约束。</p>
+            <p>用户在申请周易算命网服务过程中，需要填写一些必要的个人信息，为了更好的为用户服务，请保证提供的这些个人信息的真实、准确、合法、有效并注意及时更新。<strong>若因填写的信息不完整或不准确，则可能无法使用本服务或在使用过程中受到限制。如因用户提供的个人资料不实或不准确，给用户自身造成任何性质的损失，均由用户自行承担。</strong></p>
+            <p>保护用户个人信息是周易算命网的一项基本原则，周易算命网运用各种安全技术和程序建立完善的管理制度来保护用户的个人信息，以免遭受未经授权的访问、使用或披露。<strong>未经用户许可周易算命网不会向第三方（周易算命网控股或关联、运营合作单位除外）公开、透露用户个人信息，但由于政府要求、法律政策需要等原因除外。</strong></p>
+            <p>在用户发送信息的过程中和本网站收到信息后，<strong>本网站将遵守行业通用的标准来保护用户的私人信息。但是任何通过因特网发送的信息或电子版本的存储方式都无法确保100%的安全性。因此，本网站会尽力使用商业上可接受的方式来保护用户的个人信息，但不对用户信息的安全作任何担保。</strong></p>
+            <p>此外，您已知悉并同意：<strong>在现行法律法规允许的范围内，周易算命网可能会将您非隐私的个人信息用于市场营销，使用方式包括但不限于：在网页或者app平台中向您展示或提供广告和促销资料，向您通告或推荐服务或产品信息，使用电子邮件，短信等方式推送其他此类根据您使用周易算命网服务或产品的情况所认为您可能会感兴趣的信息。</strong></p>
+            <p>本网站有权在必要时修改服务条例，<strong>本网站的服务条例一旦发生变动，将会在本网站的重要页面上提示修改内容，用户如不同意新的修改内容，须立即停止使用本协议约定的服务，否则视为用户完全同意并接受新的修改内容。</strong>根据客观情况及经营方针的变化，本网站有中断或停止服务的权利，用户对此表示理解并完全认同。</p>
+            <p>周易算命网保留对本协议的最终解释权。</p>
+        </div>
+        <div class="ppb_close" id="protocolHideBtn"><b>关闭</b></div>
+    </div>
+</div>
+<script>
+    var dinA=document.querySelector(".sm_form_sex>span:nth-child(1)>i"),
+            dinem=document.querySelector(".sm_form_sex>span:nth-child(1)>i>em"),
+            dinemB=document.querySelector(".sm_form_sex>span:nth-child(2)>i>em"),
+            dinB=document.querySelector(".sm_form_sex>span:nth-child(2)>i"),
+            dgb=document.querySelector("#protocolHideBtn"),
+            xieyi=document.querySelector("#protocolPopBox");
+    console.log(dgb);
+    dinA.addEventListener("click",function(){
+        dinem.style.display="block";
+        dinemB.style.display="none";
+    })
+    dinB.addEventListener("click",function(){
+        dinem.style.display="none";
+        dinemB.style.display="block";
+    })
+    dgb.addEventListener("click",function(){
+        xieyi.style.display="none";
+    })
+</script>
+<div class="public_test_fixed" id="testFixedBtn"><span>立即测算</span></div>
+<script>
+    //测算底部悬浮
+    (function() {
+        var topShow = $(".J_testFixedShow");
+        if(topShow.length) {
+            var topShow = topShow.offset().top;
+            var topNum = $(".J_testFixedTop").length > 0 ? ($(".J_testFixedTop").offset().top - 20) : 200;
+            var testBtn = $("#testFixedBtn");
+            $(window).scroll(function() {
+                var wt = $(window).scrollTop();
+                wt > topShow ? (testBtn.fadeIn(), $('.public_footer_servers').css('padding-bottom', '50px')) : (testBtn.fadeOut(), $('.public_footer_servers').css('padding-bottom', '20px'));
+            });
+            testBtn.add('.J_testScrollTop').on('click', function() {
+                $('html,body').scrollTop(topNum)
+            })
+        }
+    })()
+</script>
+
+<footer class="public_footer_servers">
+    <p>周易算命网</p>
+    <p>客服7x24小时在线</p>
+    <div class="pf_payment"><span>Payment</span><img src="..\..\Public\Index\images\payment.png" alt=""></div>
+</footer>
+<div style="display: none">
+
+    <script src="..\..\Public\Index\js\ntog.js"></script>
+</div>
+</body>
+<script>
+    var formTop = $('.sm_form').eq(0);
+    var  ft = formTop.offset().top;
+    formTop.css({'position':'relative'});
+    var hrefs = '<div style="width: 100%; height: 1px; overflow: hidden;position: absolute; left: 0; top: -0.75rem;" id="ceForm"></div>';
+    //	console.log(hrefs);
+    formTop.prepend(hrefs);
+    var hTop = $('#ceForm').offset().top;
+    var fiex = ''+
+            '<div style=" width: 100%;position: fixed; left: 0; right: 0; bottom: 0; z-index: 99; background-color: rgba(0,0,0,0.5); display:none;" class="fix">'+
+            '<a href="javascript:;" style=" background: #d23037;display: block;height: 34px;line-height: 34px;font-size: 18px;color: #fff;border-radius: 5px;-o-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-webkit-border-radius: 5px;margin:5px 5px;text-align:center">立即测算</a>'+
+            '</div>';
+    var fixDiv = '<div style="width:100%; height:2rem;" class="fixDiv"></div>';
+    $('body').append(fiex).append(fixDiv);
+    $(window).scroll(function(){
+        var docTop = $(this).scrollTop()-20;
+        if(docTop>=hTop){
+            $('.fixDiv').show();
+            $('.fix').show();
+        }else{
+            $('.fixDiv').hide();
+            $('.fix').hide();
+        }
+    });
+    $('.fix').click(function(){
+        var t = $('#ceForm').offset().top;
+        //console.log(t)
+        $(window).scrollTop(t);
+        $('.fixDiv').hide();
+        $('.fix').hide();
+    });
+</script>
+<script src="..\..\Public\Index\js\localdata.js"></script>
+</html>
+<script type="text/javascript">
+    $(function() {
+        //首页描点
+        var miaodian = $("#miaodian");
+        $(".J_back_form").on('click', function() {
+            $("body,html").scrollTop(miaodian.offset().top - 50)
+        });
+    })
+</script>
+
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>

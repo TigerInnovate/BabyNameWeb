@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="applicable-device" content="mobile">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=720,width=device-width, initial-scale=1,  initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <title>超专业的生辰八字起名_易经在线起名_易经占卜</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    //alert(clientWidth)
+                    if (!clientWidth) return;
+                    var fts = clientWidth / 10;
+                    if (fts < 32) {
+                        fts = 32;
+                    } else if (fts > 72) {
+                        fts = 72;
+                    }
+                    docEl.style.fontSize = fts + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="..\..\Public\Wap2\css\yjqm_style.css">
+    <link rel="stylesheet" href="..\..\Public\Wap2\css\calendar.css">
+    <link rel="stylesheet" href="..\..\Public\Wap2\css\wyqm.css">
+    <link rel="stylesheet" href="..\..\Public\Wap2\css\calendar-1.css?ver=1">
+    <script src="..\..\Public\Wap2\js\jquery.js"></script>
+    <script src="..\..\Public\Wap2\js\calendar.min.js"></script>
+    <script src="..\..\Public\Wap2\js\main.js"></script>
+    <script src="..\..\Public\Wap2\js\qiming.js"></script>
+    <script src="..\..\Public\Wap2\js\wyqm.js?ver1"></script>
+    <!--<script src="js/cookie.js"></script>-->
+    <script src="..\..\Public\Wap2\js\ntog.js"></script>
+</head>
+<body class="wyqm">
+
+<div class="wrap">
+    <header class="sm_hd">
+        <h3 class="smTitle" id='htitle'>周易起名</h3>
+    </header>
+    <style type="text/css">
+        .evaluate {
+            padding: 0.2rem;
+            margin-top: 10px;
+        }
+
+        .evaluate .text {
+            height: 30px;
+            border: 1px solid #A57F41;
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            padding: 0 .1rem;
+            font-size: 14px;
+        }
+
+        .evaluate .text2 {
+            height: 60px;
+            border: 1px solid #A57F41;
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            padding: 0 .1rem;
+            line-height: 20px;
+            resize: none;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .submit-evaluate {
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #A57F41;
+            color: #fff;
+            width: 90%;
+            margin: 15px auto 15px auto;
+            padding: 0 0.1rem;
+            font-size: 15px;
+        }
+
+        .order_list img {
+            width: 100%;
+        }
+
+        .new_list {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .new_list li {
+            padding: 0.2rem 0 0.2rem 0.3rem;
+            border-bottom: 1px solid #ddd6d1;
+
+        }
+
+        .order_search {
+            padding: 0.2rem 0 0.2rem 0.3rem;
+            width: 90%;
+            margin: auto;
+        }
+
+        .order_search input {
+            width: 75%;
+            height: 30px;
+            float: left;
+            padding-left: 0.2rem;
+            border: 1px solid #A57F41;
+        }
+
+        .btn-order {
+            height: 32px;
+            text-align: center;
+            line-height: 32px;
+            background: #A57F41;
+            color: #fff;
+            width: 20%;
+            display: block;
+            float: left;
+            font-size: 14px;
+        }
+
+        .faq img {
+            width: 100%;
+        }
+
+        .tree {
+            width: 95%;
+            margin: auto;
+        }
+
+        .tree dt {
+            padding: 5px;
+        }
+
+        .tree dd div {
+            padding: 5px;
+            background: #A57E43;
+            border-radius: 3px;
+            color: #fff;
+        }
+    </style>
+
+    <div class="sm_banner"><img src="..\..\Public\Wap2\images\wyqm_banner.jpg" alt=""></div>
+
+    <ul class="clearfix sm_nav">
+        <li><a href="javascript:;" class="active" id="active">周易起名</a></li>
+        <li><a href="..\Cx\index.html" id="inquiry">订单查询</a></li>
+    </ul>
+    <div class="wyqm_dshi wyqm_wrap">
+        <ul>
+            <li>正宗算法·精确计算五行含量</li>
+            <li>喜用神·需要什么则补什么</li>
+            <li>传承经典 去伪存真</li>
+            <li>优美、吉祥美名</li>
+        </ul>
+    </div>
+    <!--<div class="queryBox" style="display:none;">
+        <div class="queryWrap">
+            <input type="text" placeholder="请输入订单号" name="" id="ordernums" class="queryTxt animated">
+            <input type="submit" value="查询" class="queryBtn" id="query">
+
+        </div>
+        <div class="queryTips">
+        <span>温馨提示：</span>未付款订单只能通过订单号查询,如果订单号忘记，您可以<a href="/order/history" style="color:red">点此查看您的历史订单</a>。
+        </div>
+    </div>-->
+    <div class="sm_form">
+        <div class="qmTitle"><h4 class="qmIocn">起名必填信息</h4></div>
+        <div class="qm_form_2">
+            <span class="qm_form_bd qm_form_t_l"></span>
+            <span class="qm_form_bd qm_form_t_r"></span>
+            <span class="qm_form_bd qm_form_b_l"></span>
+            <span class="qm_form_bd qm_form_b_r"></span>
+            <form action="../../../wap2/pay/" class="form_c" method="post">
+                <ul>
+                    <li>
+                        <span class="sm_form_name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;氏：</span>
+                        <div class="sm_form_txt">
+                            <input class="animated" style="width:100%;float:left" type="text" id="smname" name="surname" placeholder="请输入姓氏" value="">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+                        <div class="sm_form_txt sm_form_sex">
+                            <span class="cur" data-value="1"><i></i><font>男</font></span>
+                            <span data-value="0"><i></i><font>女</font></span>
+                            <input type="hidden" name="sex" id="gender" value="1">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name">出生日期：</span>
+                        <div class="sm_form_txt">
+                            <span class="icon_right"></span>
+                            <input type="text" id="birthday" data-input-id="b_input" class="Js_date animated" data-type="0" value="" placeholder="请选择您的生日" data-date="2017-10-21">
+                            <input type="hidden" name="birthday" id="b_input" value="">
+                        </div>
+                    </li>
+                    <li>
+                        <span class="sm_form_name">出生时辰：</span>
+                        <div class="sm_form_txt">
+                            <!--<div class="clearfix sec_txt fl">-->
+                            <select align="center" class="sel fl hoerSec" name="hour" id="hour">
+                            </select>
+                            <label for="hour" class="fl">时</label>
+                            <!--</div>
+                            <div class="clearfix sec_txt fl">-->
+                            <select name="mini" id="minutes" class="sel fl minutesSel">
+                            </select>
+                            <label for="minutes" class="fl" style='padding:0'>分</label>
+                            <!--</div>-->
+                        </div>
+                    </li>
+                    <!--
+                    <li>
+                        <span class="sm_form_name">联系手机：</span>
+                        <div class="sm_form_txt">
+                            <span class="icon_right"></span>
+                            <input type="text" name="phone" id="phone"  style="font-size:12px;" value="" placeholder="起名结果将短信发送手机">
+
+                        </div>
+                    </li>
+                    -->
+
+                </ul>
+            </form>
+            <div class="sm_btn m_b_36" style="margin-top: 0.3rem">
+                <!--<div id='agreebox' class='animated' style='text-align:center;font-size:0.38rem;padding:0.2rem;'>-->
+                    <!--<input type="checkbox" checked="checked" id="agree" style='webkit-appearance: checkbox;-->
+						<!--vertical-align: middle;position: relative; margin-top: -2px;margin-right: 6px;'>同意-->
+                    <!--<span style='color:#ff8b58;text-decoration: underline;'>个人隐私协议</span>-->
+                <!--</div>-->
+
+                <p class=""><a href="javascript:;" id="cs"><i class="qmIocn">立即获取吉祥美名</i></a></p>
+                <p class="item_num">已有<span id="tjs">83289149</span>人选择智能起名，<font color="red">98.3%</font>好评</p>
+                <p class="item_num" id="weiixn_num">加老师微信：<font color="red" id="weixin_code">qiming88666</font> 免费咨询起名知识</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wyqm_wrap wyqmAnli">
+        <h3 class="wyqm_anli_title wyAl_iocn">为什么选择易经起名网</h3>
+        <p class="wyqm_anli_intro"><span>独家五行喜用神 · 精准分析系统 !</span></p>
+        <div class="wyqm_anli_nav wyAl_iocn">
+            <span>分析八字</span>
+            <span>五行含量</span>
+            <span>五行喜忌</span>
+            <span>甄选汉字</span>
+        </div>
+        <div class="wyqm_anli_header">
+            <h4>真实案例分析</h4>
+            <p>案例：女子 公历生日 2015年8月25日 15点30分</p>
+        </div>
+        <div class="qmAnliTitle qmAliCon clearfix">
+            <h4 class="fl">八字起名</h4>
+            <h4 class="fr">其他机构</h4>
+        </div>
+        <div class="qmAliCon clearfix wyqm_hanliang">
+            <div class="fl qnAl_left">
+                <div class="qmAliconTitle">精确计算五行含量</div>
+                <ul class="hanlinag">
+                    <li><b>金</b><span></span><i>54.62%</i></li>
+                    <li><b>水</b><span></span><i>22.64%</i></li>
+                    <li><b>木</b><span></span><i>9.47%</i></li>
+                    <li><b>火</b><span></span><i>3.24%</i></li>
+                    <li><b>土</b><span></span><i>10.05%</i></li>
+                </ul>
+            </div>
+            <div class="fr qnAl_right">
+                <div class="qmAliconTitle">五行含量简单相加</div>
+                <ul class="hanlinag">
+                    <li><b>金</b>4个</li>
+                    <li><b>水</b>1个</li>
+                    <li><b>木</b>2个</li>
+                    <li><b>火</b>0个</li>
+                    <li><b>土</b>1个</li>
+                </ul>
+            </div>
+        </div>
+        <div class="qmAliCon clearfix wyqm_xiji">
+            <div class="fl qnAl_left">
+                <div class="qmAliconTitle">喜用神选择正确</div>
+                <div class="xiji">
+                    <p>喜用神：木,火</p>
+                    <p>忌神：金,土,水</p>
+                </div>
+            </div>
+            <div class="fr qnAl_right">
+                <div class="qmAliconTitle">五行含量简单相加</div>
+                <div class="xiji">
+                    <p>喜用神：金,木,火</p>
+                    <p>忌神：土,水</p>
+                </div>
+            </div>
+        </div>
+        <div class="qmAliCon clearfix wyqm_pingfen">
+            <div class="fl qnAl_left">
+                <div class="qmAliconTitle">三才五格评分</div>
+                <ul class="pingfen">
+                    <li class="clearfix"><span class="pfName">配置<i>(健康)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+                    <li class="clearfix"><span class="pfName">基础运<i>(环境)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+                    <li class="clearfix"><span class="pfName">成功运<i>(事业)</i></span><span class="pfNum"><i style="width: 100%;">100</i></span></li>
+                    <li class="clearfix"><span class="pfName">社交运<i>(机遇)</i></span><span class="pfNum"><i style="width: 95%;">95</i></span></li>
+                    <li class="clearfix"><span class="pfName">天格<i>(遗传)</i></span><span class="pfNum"><i style="width: 80%;">80</i></span></li>
+                    <li class="clearfix"><span class="pfName">人格<i>(才华)</i></span><span class="pfNum"><i style="width: 90%;">90</i></span></li>
+                    <li class="clearfix"><span class="pfName">地格<i>(家庭)</i></span><span class="pfNum"><i style="width: 95%;">95</i></span></li>
+                    <li class="clearfix"><span class="pfName">总格<i>(财富)</i></span><span class="pfNum"><i style="width: 85%;">85</i></span></li>
+                    <li class="clearfix"><span class="pfName">外格<i>(朋友)</i></span><span class="pfNum"><i style="width: 90%;">90</i></span></li>
+                </ul>
+            </div>
+            <div class="fr qnAl_right">
+                <div class="qmAliconTitle">无三才五格评分</div>
+                <ul class="pingfen">
+                    <li class="clearfix"><span class="pfName">配置：</span><span class="pfNum">60</span></li>
+                    <li class="clearfix"><span class="pfName">基础运：</span><span class="pfNum">32</span></li>
+                    <li class="clearfix"><span class="pfName">成功运：</span><span class="pfNum">40</span></li>
+                    <li class="clearfix"><span class="pfName">社交运：</span><span class="pfNum">24</span></li>
+                    <li class="clearfix"><span class="pfName">天格：</span><span class="pfNum">21</span></li>
+                    <li class="clearfix"><span class="pfName">人格：</span><span class="pfNum">32</span></li>
+                    <li class="clearfix"><span class="pfName">地格：</span><span class="pfNum">17</span></li>
+                    <li class="clearfix"><span class="pfName">总格：</span><span class="pfNum">8</span></li>
+                    <li class="clearfix"><span class="pfName">外格：</span><span class="pfNum">26</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="qmAliCon clearfix">
+            <div class="fl zhuyun zhuy_left">助运100%</div>
+            <div class="fr zhuyun zhuy_right">助运30%</div>
+        </div>
+    </div>
+    <div class="">
+        <img src="..\..\Public\Wap2\images\wyqm_1.jpg" alt="" class="img_w100">
+    </div>
+    <ul class="bbqmIntros">
+        <li class="bbqm_intro_1 clearfix">
+            <div class="fl bbqm_intro_txt">
+                <h4>批算最准，助运更好</h4>
+                <p>大师专注周易命名多年，深究百家姓词，专业，命名案例高达10万多位，国际风水大师李法章亲临指导</p>
+            </div>
+            <div class="fr bbqm_intro_img"><img src="..\..\Public\Wap2\images\wyqm_2.jpg" alt=""></div>
+        </li>
+        <li class="bbqm_intro_2 clearfix">
+            <div class="fl bbqm_intro_img"><img src="..\..\Public\Wap2\images\wyqm_3.jpg" alt=""></div>
+            <div class="fr bbqm_intro_txt">
+                <h4>权威正规，诚信经营</h4>
+                <p>荣获中国易学协会特邀单位，2015年最具电商潜力企业，中华易学研究示范单位，中华杰出易学大师奖等。</p>
+            </div>
+        </li>
+        <li class="bbqm_intro_3 clearfix">
+            <div class="fl bbqm_intro_txt">
+                <h4>国际实力，专业可靠</h4>
+                <p>国家正规注册公司，2000多方办公经营，均有实体店，服务保障。</p>
+            </div>
+            <div class="fr bbqm_intro_img"><img src="..\..\Public\Wap2\images\wyqm_4.jpg" alt=""></div>
+        </li>
+        <li class="bbqm_intro_4 clearfix">
+            <div class="fl bbqm_intro_img"><img src="..\..\Public\Wap2\images\wyqm_5.jpg" alt=""></div>
+            <div class="fr bbqm_intro_txt">
+                <h4>诚恳服务，口碑一流</h4>
+                <p>专业服务是我们的宗旨，客户满意是我们最大的追求，精心配到，服务至上，国学助理会全程服务跟踪。</p>
+            </div>
+        </li>
+    </ul>
+    <div class="comment wyqm_wrap bd_t_rl">
+        <div class="qmTitle"><h4 class="qmIocn">客户评论</h4></div>
+        <ul class="commList">
+            <li>
+                <h5>订单号为：SHJ***20975 ：</h5>
+                <p>
+                    易经起名网的名字大气时尚，寓意很好，非常喜欢小名叫起来朗朗上口，现在小孩还太小，但是一家人都是拿着小名在逗他，好像宝宝已经会听懂话似的，这种感觉真的非常好；客服也非常敬业，非常有耐心，非常非常感谢你们！</p>
+            </li>
+            <li>
+                <h5>订单号为：SHJ***28295 </h5>
+                <p>必须好评，服务很到位，开始我自己搞错日期了，回复邮件以后帮我改过来了！谢谢，值得信赖。 </p>
+            </li>
+            <li>
+                <h5>订单号为：SHJ***90294 </h5>
+                <p>
+                    我加微信购买的人工亲算起名，名字确实好听，也有很有寓意，老师非常专业！写这么多不只是想夸夸这家网站，只是给有起名苦恼的人一些参考，自己起名确实费劲脑汁也不一定悟得好名字，还是专业的人做专业的事，五星好评！ </p>
+            </li>
+            <li>
+                <h5>订单号为：SHJ***88523 </h5>
+                <p>有八字分析，五行喜忌一目了然，很专业的感觉！ </p>
+            </li>
+            <li>
+                <h5>订单号为：SHJ***22335 </h5>
+                <p>这是我第二次来这里取名了，儿子的名字是易经起名网起的，这次女儿因为名字不太好，所以加大师微信购买了人工起名，目前已经选好要用的名字了，非常感谢老师不厌其烦的解答，老师人真的非常好，很有耐心。 </p>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="comProblem wyqm_wrap bd_t_rl">
+        <div class="qmTitle"><h4 class="qmIocn">常见问题</h4></div>
+        <dl class="comProItem">
+            <dt>名字真的那么重要吗？</dt>
+            <dd>
+                答：古人曰“赐子千金，不如赐子一艺，赐子一艺，不如赐子好名”。“名不正则言不顺”，人生命运，个人命理固然重要，但好的名字有提升运势、运气弥补个人命里不足的作用。但是，不同的人生时期，对名字的也有不同的要求；不同的工作事业，名字所起的作用也有轻重之分。好名字提升人生运程，不好的名字会对人生、事业、爱情、婚姻、财运等造成不利的影响。
+            </dd>
+        </dl>
+        <dl class="comProItem">
+            <dt>宝宝八字的五行，是缺什么就补什么吗？</dt>
+            <dd>答：不是。需要区别对待，精确分析，真正做到“需要什么，则补什么”。否则就是简单加减，补救容易失误。</dd>
+        </dl>
+        <dl class="comProItem">
+            <dt>名字的笔画五格评分越高越好吗？</dt>
+            <dd>答：不对。好名字首要考虑八字五行是否助运、音形义好不好，然后再参考笔画五格评分。</dd>
+        </dl>
+        <dl class="comProItem">
+            <dt>女性可以使用带有“孤寡运”数理暗示的名字吗？</dt>
+            <dd>答：如果八字里面带有孤寡信息，应避免使用带有“孤寡运”数理暗示的名字。如果八字没有孤寡信息，则可以放心使用。</dd>
+        </dl>
+        <dl class="comProItem">
+            <dt>取了好名字是否就意味着高枕无忧了？</dt>
+            <dd>答：好名+好命=锦上添花；好名+坏命=雪中送炭；坏名+好命=有心无力；坏名+坏命=落井下石。名字的作用力不容忽视，也不能过分依赖。</dd>
+        </dl>
+        <dl class="comProItem">
+            <dt>名字不满意怎么办？</dt>
+            <dd>答：易经起名网起名的不满意率只有千分之二，原因大多是因为操作不熟练、需求不明确、追求满分造成的。 如果您有疑问请及时联系客服，我们一定能完美解决您所提出的问题，争取满意百分百。</dd>
+        </dl>
+    </div>
+
+    <script src="..\..\Public\Wap2\js\foldpanel.js"></script>
+
+
+    <script>
+        var order_type_flag= "SHJ";
+        $("#inquiry").click(function () {
+            $(this).addClass("active");
+            $("#active").removeClass("active");
+            $(".sm_banner img").attr("src", "/Public/Wap2/images/wyqm_banner2.jpg");
+            $(".wyqm_dshi").hide();
+            $(".queryBox").show();
+        })
+        $("#active").click(function () {
+            $(this).addClass("active");
+            $("#inquiry").removeClass("active");
+            $(".sm_banner img").attr("src", "/Public/Wap2/images/wyqm_banner.jpg");
+            $(".wyqm_dshi").show();
+            $(".queryBox").hide();
+        })
+        var master = "";
+        var gb_price = 29.8;
+        $(function () {
+            $("#master a").click(function () {
+                $("#master img").addClass('gray');
+                $(this).find("img").removeClass('gray');
+                master = ($(this).attr('name') );
+            })
+
+            $("#cs").click(function () {
+                cs();
+            })
+
+            var id = 0;
+            master = 'dong';
+        })
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+
+        function cs() {
+            if ($('#agree').prop('checked') === false) {
+                $("#agreebox").addClass('shake');
+                next = false;
+                clearshake();
+                return;
+            }
+
+            $("#smname").val($("#smname").val().replace(/[^\u4E00-\u9FA5]/g, ''));
+
+            if ($("#smname").val() == '' || $("#smname").val().length > 2) {
+                $("#smname").addClass('shake');
+                next = false;
+                clearshake();
+                return;
+            }
+            if ($("#b_input").val() == '') {
+                $("#birthday").addClass('shake');
+                next = false;
+                clearshake();
+                return;
+            }
+            /*if($("#phone").val()==''){
+             alert("请填写联系方式")
+             $("#phone").addClass('shake').focus();next=false;clearshake();return;
+             }*/
+            var xm = $("#smname").val();
+            var o = {};
+            o.name = xm;
+            o.gender = $("#gender").val();
+            o.birthday = $("#b_input").val();
+            o.xing = xm;
+            o.ming = '';
+            o.birthtime = $("#hour").val();
+            o.birthmin = $("#minutes").val();
+            o.phone = "";//$("#phone").val();
+            o.ver = $("#ver").val();
+            var next = true;
+
+            if (!next) {
+                clearshake();
+                return;
+            }
+            //$(".form_c").submit();
+//            location.href = "pay/?" + $.param(o);
+            var host = window.location.host;
+            location.href = "http://"+host+"/wap2/pay/?" + $.param(o);
+
+            //console.log(o);
+
+
+        }
+
+
+        function clearshake() {
+            setTimeout(function () {
+                $(".shake").removeClass('shake');
+            }, 2000)
+        }
+
+
+//设置用户首次微信cookie
+function setCookie(name,value,time){
+  var strsec = getsec(time);
+  var exp = new Date();
+  exp.setTime(exp.getTime() + strsec*1);
+  document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";path=/";
+}
+
+function getsec(str){
+  var str1=str.substring(1,str.length)*1;
+  var str2=str.substring(0,1);
+  if (str2=="s"){
+    return str1*1000;
+  }else if (str2=="h"){
+    return str1*60*60*1000;
+  }else if (str2=="d"){
+    return str1*24*60*60*1000;
+  }
+}
+//获取cookie
+function getCookie(name){
+  var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+  if(arr=document.cookie.match(reg))
+    return unescape(arr[2]);
+  else
+    return null;
+}
+
+var randNum = Math.round(Math.random()*2);
+
+var weixinArr = ['qiming8886','qiming88666','quming8866'];
+//如果没有获取到cookie  则生成cookie
+if(getCookie('weixin')){
+    $('#weixin_code').html(getCookie('weixin'));
+}else{
+    setCookie("weixin",weixinArr[randNum],"d365");
+    $('#weixin_code').html(getCookie('weixin'));
+}
+
+
+//获取referer
+    function goTo(url){
+        var ua = navigator.userAgent;
+        if(ua.indexOf('MSIE')>=0){
+            var rl = document.createElement('a');
+            rl.href= url;
+            document.body.appendChild(rl);
+            rl.click();
+        }else{
+            location.href = url;
+        }
+    }
+    function getReferer(){
+        if(document.referrer){
+            return document.referrer;
+        }else{
+            return false;
+        }
+    }
+
+//获取请求数据的关键字
+function GetRequest(strHref,strName){
+   var intPos = strHref.indexOf("?");  // 参数开始位置
+   var strRight = strHref.substr(intPos + 1);
+   var arrTmp = strRight.split("&"); //参数分割符
+   for(var i = 0; i < arrTmp.length; i++){ 
+        var arrTemp = arrTmp[i].split("="); 
+        if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1]; 
+   } 
+   return "";
+}
+//获取搜索关键字
+function getkwd(){
+    var strHref = getReferer();
+    var kwd = GetRequest(strHref,'wd');
+    setCookie("referer",kwd,"d365");
+}
+//setCookie("referer",'--kwd--',"d365");
+getkwd();
+console.log(getCookie('referer'));
+    </script>
+
+
+
+        </div>
+
+    </div>
+
+    <!--<div style="height:1.3rem;"></div>-->
+    <!--页面底结束-->
+    <div style='display:none'> 
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+            
+    </div>
+
+<!--
+    <div id='myorderlist' style='width:2rem;position: fixed;bottom: 4.5rem;right: 0rem;z-index:9999999'>
+        <a href="..\Cx\order_history.html"><img style='width:100%' src='..\..\Public\Wap2\images\myorder.png'></a>
+    </div>
+-->
+    <script>
+        $(function () {
+            if (localStorage['orders'] === undefined) {
+                $('#myorderlist').hide();
+            }
+        })
+    </script>
+    <script src="..\..\Public\Wap2\js\localdata.js"></script>
+    <style>
+        .mask{display:none;width:100%;height:3000px;background:#000;z-index:1000;position:fixed;left:0;top:0;filter:alpha(opacity=50); /* IE */  -moz-opacity:0.5; /* 老版Mozilla */  -khtml-opacity:0.5; /* 老版Safari */  opacity: 0.5; /* 支持opacity的浏览器*/   }
+        .layouts{display:none;position:fixed;width:7rem;left:40%;margin-left:-2.5rem;background:#fff;border:2px solid #FF0000;top:40%;z-index:1001;margin-top:-102px;}
+        .layouts h2{font-weight:normal;font-size:16px;text-align:center;padding:10px;}
+        .layouts p{text-align:center;color:#999;}
+        .layouts .wxh{display:block;margin:20px auto;width:100px;height:30px;background:#B90000;font-size:16px;color:#F7EF00;text-align:center;line-height:30px;border-radius:5px;-webkit-user-select:initial;}
+        .layouts .bbbb{display:block;margin:20px auto;width:120px;}
+        .layouts .bbbb img{width:100%;}
+        .gb{display:block;width:30px;height:30px;background:#fff;border-radius:50%;position:absolute;right:-14px;top:-14px;}
+        .gb img{width:100%;height:100%;}
+    </style>
+        <script>
+        my_order_hide();
+        function my_order_hide() {
+            if (localStorage['orders'] === undefined || localStorage['orders']=='{}') {
+                $('#myorderlist').hide();
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

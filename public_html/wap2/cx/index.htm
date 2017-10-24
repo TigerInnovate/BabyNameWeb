@@ -1,0 +1,342 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="applicable-device" content="mobile">
+<meta name="viewport" content="width=720,width=device-width, initial-scale=1,  initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<title>八字起名</title>
+<script>
+(function (doc, win) {
+	var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		var clientWidth = docEl.clientWidth;
+		//alert(clientWidth)
+		if (!clientWidth) return;
+			var fts = clientWidth /10;
+			if(fts<32){
+				fts=32;
+			}else if(fts>72){
+				fts=72;
+			}
+			docEl.style.fontSize = fts + 'px';
+		};
+	if (!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<link rel="stylesheet" href="..\css\style.css">
+<link rel="stylesheet" href="..\css\qiming-1.css?ver=3"> 
+<link rel="stylesheet" href="..\css\calendar.css">
+<script src="..\js\jquery.js"></script>
+<script src="..\js\daySelect.js?ver=1"></script>
+<script src="..\js\qiming.js?ver=1"></script> 
+<script src="..\js\qm.result.js?oer="></script>
+<script src="..\js\calendar.min.js?ver=1"></script>
+<script src="..\js\main.js?ver=2"></script>
+</head>
+
+<style>
+.qmUserInfo{width:100%;margin:0 auto; background:#fff;}
+.qmUserInfo table{border-top:1px solid #c09d65;}
+.qmUserInfo td{padding:18px 0px;line-height:1.8em;border-bottom:1px solid #c09d65;}
+.qmUserInfo .bor1{border-right:1px solid #c09d65;}
+.mlrem1{margin-left:0.5rem;}
+.td1{width:12.6%}
+.td2{width:12.6%}
+.td3{width:73.7%}
+ 
+.bor{border:1px solid red;}.mt20{margin-top:20px;}
+.w_100{width:100%;}.dn{display:none;}.dit{display:inline-table;}.dib{display:inline-block}.db{display:block;}
+.cx{width:90%;margin:0 auto;padding:15px 0;}
+.cx .ipt{width:4rem;height:30px; border-radius:10px;padding:0px 5px;}
+.cx .btn{width:1.5rem; border-radius:5px;line-height:30px;text-align:center;background:#c09d65;color:#FFF;margin-left:8px;}
+#orderList a{display:block;width:100%;}
+#orderList .order-t{font-weight:bold;margin-left:-1.3rem;}
+.cor1{color:#c09d65;}
+</style> 
+<body class="qm">
+<div class="wrap ov">
+	<header class="sm_hd">
+		<h3 class="smTitle">八字起名</h3>
+	</header> 
+
+	<div class="sm_banner"><a href="javascript:"><img src="..\images\qm_banner2.jpg" alt=""></a></div>
+	<div class="a3_bd a3_ds m_b_20" style="font-size:0.4rem;line-height:0.6rem;">
+		　　已为<span class="c_red" id="tjs">9559249</span>人进行了八字起名，<span class="c_red">姓名伴随人一生</span>，所以影响人一生。命好、运好再加上<span class="c_red">一个吉祥好名</span>，会让您将来<span class="c_red">功成名就</span>，
+		事事顺心。 名字不仅是一个人的符号，更是<span class="c_red">一个人形象、品味</span>的重要标志。<br>
+　　古人云：赐子千金，不如教子一艺；教子一艺，不如赐子好名；不怕生错命，就怕起错名。
+
+	</div> 
+	<div id="showme">
+		<div class="qmSect m_b_20">
+			<div class="cx">
+            	<span class="dib">订单号：</span>
+                <input type="text" name="txtContact" id="txtContact" class="dib ipt" value="" placeholder="">
+                <span class="dib btn" onclick="query_order()">查询</span>
+            </div>
+			<div class="qmUserInfo"> 
+				<table border="0">  
+                    <tr>
+                    <td class="td1 tc"> </td>
+                    <td colspan="2" align="center">
+                        <div class="tl mlrem1 tc" id="orderList"> 
+                         
+                         <span>暂无订单信息</span>
+                        <!--<span class="order-t">以下是您所有付款订单记录：</span>
+                        <a href="">JX1W0623083732839</a>
+                        <a href="">JX1W0623083732839343</a>
+                        <a href="">JX1W06230738097213</a>
+                        <a href="">JX1W062307380972133</a>-->
+                        
+                        </div> 
+                        
+                    </td>
+                    
+                    </tr>
+                    <tr>
+                    <td colspan="3" class="cor1" style="border-bottom:0px;">点击订单号查看起名结果</td>
+                    </tr>
+				</table>
+			</div> 
+            
+		</div> 
+	</div>
+	
+    
+<a name="lijq"></a>
+	<div class="sm_form">
+		<div class="qmTitle"><h4 class="qmIocn">起名必填信息</h4></div>
+		<div class="qm_form_2">
+			<span class="qm_form_bd qm_form_t_l"></span>
+			<span class="qm_form_bd qm_form_t_r"></span>
+			<span class="qm_form_bd qm_form_b_l"></span>
+			<span class="qm_form_bd qm_form_b_r"></span>
+			<form action="../pay/index.asp" class="form_c">
+				<ul>
+					<li>
+						<span class="sm_form_name"><i></i>姓氏：</span>
+						<div class="sm_form_txt">
+							<input class="animated" style="width:100%;float:left" type="text" id="smname" name="surname" placeholder="请输入姓氏" value="">
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>性别：</span>
+						<div class="sm_form_txt sm_form_sex">
+							<span class="cur" data-value="1"><i></i><font>男</font></span>
+							<span data-value="0"><i></i><font>女</font></span>
+							<input type="hidden" name="sex" id="gender" value="1">
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>出生日期：</span>
+						<div class="sm_form_txt">
+							<span class="icon_right"></span>
+							<input type="text" id="birthday" data-input-id="b_input" class="Js_date animated" data-type="0" value="" placeholder="请选择您的生日" data-date="2017-06-12">
+							<input type="hidden" name="birthday" id="b_input" value="">
+                             
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>出生时辰：</span>
+						<div class="sm_form_txt">
+							<!--<div class="clearfix sec_txt fl">-->
+								<select align="center" class="sel fl hoerSec" name="hour" id="hour">
+								</select>
+								<label for="hour" class="fl">时</label>
+							<!--</div>
+							<div class="clearfix sec_txt fl">-->
+								<select name="minutes" id="minutes" class="sel fl minutesSel">
+								</select>
+								<label for="minutes" class="fl" style='padding:0'>分</label>
+							<!--</div>-->
+						</div>
+					</li>
+					<li>
+						<span class="sm_form_name"><i></i>联系手机：</span>
+						<div class="sm_form_txt">
+							<span class="icon_right"></span> 
+							<input type="text" name="phone" id="phone" style="font-size:12px;" value="" placeholder="如：135********">
+                             
+						</div>
+					</li>
+				</ul>
+			</form>
+				<div class="sm_btn m_b_36">
+					<div id='agreebox' class='animated' style='text-align:center;font-size:0.38rem;padding:0.2rem;'>
+						<input type="checkbox" checked="checked" id="agree" style='webkit-appearance: checkbox;
+						vertical-align: middle;position: relative; margin-top: -2px;margin-right: 6px;'>同意
+						<span onclick="location.href='protocol.htm'" style='color:#ff8b58;text-decoration: underline;'>个人隐私协议</span>
+					</div>
+
+					<p class=""><a href="javascript:;" id="cs"><i class="qmIocn">立即起名</i></a></p>
+					<p class="item_num">已有<span id="tjs">9559249</span>人选择智能起名，<font color="red">98.3%</font>好评</p>
+					<!--<script>
+					$.get('sm/tj',{_d:(+new Date())},function(d){
+						$("#tjs").text(d)
+					})
+					</script>-->
+				</div>
+		</div>
+	</div>
+	<script>
+		var $Hour = $('#hour');
+		var $Minutes = $('#minutes');
+		var def_day = '--';
+		var	def_value = 0;
+		var str = '<option value="'+def_value+'" selected>'+def_day+'</option>';
+		$Hour.append(str);
+		$Minutes.append(str);
+
+        for(var i=1; i<=24; i++){
+			var hStr = '<option value="'+i+'">'+i+'</option>';
+			$Hour.append(hStr);
+        }
+        //分
+        for(var i=1; i<=60; i++){
+			var minStr = '<option value="'+i+'">'+i+'</option>';
+			$Minutes.append(minStr);
+        }
+	</script>
+    
+</div>
+
+	
+<div style="width:100%; height:2rem;"></div>
+
+
+<div class="footerFix">
+	<a href="#lijq" id="unlock">立即获取吉祥美名</a>
+</div>
+
+
+<form method="post" id="pay_form">
+ <input type="hidden" name="out_trade_no" id="out_trade_no" value=""> 
+</form>
+ 
+
+
+
+ 
+<script> 
+	$(document).ready(function(e) {
+		//主动查询 
+		var txtContact = $("#txtContact").val()  ;  
+		if(txtContact.replace(new RegExp(/[ 　]/g),"").length>0){
+		query_order();
+		}
+	});
+	$(function(){
+		
+			$("#cs").click(function(){
+				cs();
+			})	
+	})
+
+	function cs(){
+		if($('#agree').prop('checked')===false){
+			$("#agreebox").addClass('shake');next=false;clearshake();return;
+		}
+
+		$("#smname").val($("#smname").val().replace(/[^\u4E00-\u9FA5]/g,''));
+		 
+		if($("#smname").val()=='' || $("#smname").val().length>2){
+			 $("#smname").addClass('shake');next=false;clearshake();return;
+		}
+		if($("#b_input").val()==''    )	{
+			 $("#birthday").addClass('shake');next=false;clearshake();return;
+		}
+		if($("#phone").val()==''){
+			alert("请填写联系方式")
+			 $("#phone").addClass('shake').focus();next=false;clearshake();return;
+		}
+		var xm=$("#smname").val();
+		var o={};
+			o.name=xm;
+			o.gender=$("#gender").val();
+			o.birthday=$("#b_input").val();
+			o.xing=xm;
+			o.ming='';
+			o.birthtime=$("#hour").val();
+			o.birthmin=$("#minutes").val(); 
+			o.phone= $("#phone").val();
+			o.ver=$("#ver").val();
+		var next=true;
+		 
+		if(!next){
+			clearshake();return;
+		}
+		//$("#form_c").submit();
+		location.href="../pay/?"+$.param(o);
+
+		console.log(o);
+
+
+	}
+	function clearshake(){
+		setTimeout(function(){$(".shake").removeClass('shake');},2000)
+	}
+function query_order(channel){ 
+	var txtContact = $("#txtContact").val()  ;  
+	if(txtContact.replace(new RegExp(/[ 　]/g),"").length>0){
+	$("#orderList").html('<img src="../images/loading-2.gif" id="load" style="margin-left:35%;"/>');
+	$.ajax({
+		url:"../pro/xml/order_list/?t="+Math.floor(Math.random() * (12323 + 1)),type:"POST",
+		data: "contact="+escape(txtContact),
+		success: function(xml){ 
+			var xml_type = $(xml).find("info").eq(0).text(); 
+			var html ="";
+			//console.log("xml:"+xml_type+typeof xml);  
+			if(xml_type!=""&&xml_type!="0"){
+			$(xml).find("orderno").each(function(i){ 
+				var orderno = $(xml).find("orderno").eq(i).text();
+				window.location.href ="../delivery/?orderno="+orderno;
+				html = html+'<a href="/wap2/delivery/?orderno='+orderno+'">'+orderno+'</a>'
+			});
+			$("#orderList").html('<span class="order-t">以下是您所有付款订单记录：</span>'+html);
+			}else{$("#orderList").html('<span>您暂无订单信息</span>');}
+		}	
+	});	
+	}else{
+		alert("请填写您的联系方式");	
+	}
+} 
+</script>
+
+ 
+
+ 
+
+<!--订单信息 开始-->	
+	<div id='myorderlist' style='width:2rem;position: fixed;bottom: 2rem;right: 1rem;z-index:9999999'>
+		<a href='../history'><img style='width:100%' src='..\images\myorder.png'></a>
+	</div>
+	<script>
+	$(function(){
+		if(localStorage['orders']===undefined){
+			$('#myorderlist').hide();
+		}
+	})
+	</script>
+    <script src="..\js\localdata.js"></script>
+<!--订单信息 结束-->
+</body>
+
+
+
+<div style='display:none'> 
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+		</script>
+		
+</div>
+
+</html> 

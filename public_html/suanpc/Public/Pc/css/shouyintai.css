@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+.hed_box{border-bottom:2px solid #924895;font-family:微软雅黑;font-size:17px;width:990px;height:32px;margin:0 auto;
+padding-top:50px;}
+.hed_box_s1{color:#924895;}
+
+.hed_table_5d1{width:241px;height:120px;cursor:pointer;}
+.hed_table_5d1v{height:120px;position:relative;}
+
+.HedAction{border:2px solid #CC0000;positino:absolute;top:-2px;left:-2px;}
+
+/* 收银台 */
+.shouyin_box{border:1px solid #E8E8E8;border-top:none;width:990px;margin:0 auto;border-collapse: collapse;background:#F6F6F6;}
+.shouyin_box td{font-size:15px;height:35px;color:#333333;}
+.shouyin_d1{width:97px;text-align:right;}
+.shouyin_box2{width:990px;margin:0 auto;border-collapse: collapse;}
+.shouyin_box3{width:990px;margin:0 auto;border-collapse: collapse;background:#F5F5F5;display:none;}
+.shouyin_box2j1{font-size:16px;height:45px;color:#494949;font-weight:bold;}
+.shouyin_box2j2,.shouyin_box2j3{border:1px solid red;font-size:18px;cursor:pointer;}
+.shouyin_box2j2{border:1px solid #E8E8E8;text-align:right;color:#858585;}
+.shouyin_box2j2 font{font-weight:600;color:#FF2424}
+.shouyin_box2j3{border:1px solid #924895;width:150px;height:60px;text-align:center;background:#924895;color:#FFF;}
+.hed_table_5d5{width:240px;height:110px;}
+.hed_table_5d2v{border:1px solid #E8E8E8;width:240px;height:110px;background:#F6F6F6;}
+.g5D2VR{margin-left:4px;}
+
+/*线下汇款*/
+
+.shouyin_hui1k{border:1px solid #DADADA;width:990px;margin:0 auto;border-collapse: collapse;position:relative;}
+.hui1k_td1{width:72px;height:92px;text-align:right;}
+.hui1k_td2{height:47px;text-indent:0.5em;vertical-align:top;font-size:14px;color:#666666;}
+#hui1k_tdid{vertical-align:bottom;color:#FF7212;}
+.min_tuImg_B{width:28px;height:22px;position:absolute;top:-18px;right:85px;}
+.hui1k_tdLine{border:1px solid #DADADA;}
+
+.shouyin_hui1k2{width:100%;border-collapse: collapse;}
+.shouyin_hui1k2 td{}
+
+.shouyin_hui1k3{width:265px;text-align:right;}
+.shouyin_hui1k4{width:89px;height:28px;font-size:15px;text-align:right;}
+.shouyin_hui1k5{width:285px;text-indent:1em;font-size:15px;}
+.shouyin_hui1k6{width:15px;}
+.shouyin_Once1k1{width:276px;}
+.shouyin_hui1k7{position:relative;}
+.shouyin_div1{width:100%;position:absolute;top:0;left:0;}
+.shouyin_div1 h3{font-size:15px;color:#333333;text-indent:1.5em;}
+.shouyin_div1 p{height:30px;line-height:30px;font-size:14px;color:#333333;text-indent:1.8em;}
+.shouyin_div2{text-align:center;}
+.shouyin_fonts{font-size:15px;}

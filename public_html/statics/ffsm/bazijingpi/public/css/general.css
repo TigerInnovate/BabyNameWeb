@@ -1,0 +1,12 @@
+.star{ background: url(../images/start.png) no-repeat; width:100px; height: 20px; background-size: 100px auto; display: inline-block; margin-left: 10px;
+    position: relative;top:5px;  }
+.star5{ background-position: 0 0; }
+.star10{ background-position: 0 -20px; }
+.star15{ background-position: 0 -40px; }
+.star20{ background-position: 0 -60px; }
+.star25{ background-position: 0 -80px; }
+.star30{ background-position: 0 -100px; }
+.star35{ background-position: 0 -120px; }
+.star40{ background-position: 0 -140px; }
+.star45{ background-position: 0 -160px; }
+.star50{ background-position: 0 -180px; }

@@ -1,0 +1,119 @@
+input,
+button{
+    -webkit-appearance:none;
+    outline:none
+}
+// {
+//     font-family: Helvetica, Arial, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", "Lucida Grande", sans-serif, "宋体", "Microsoft Yahei", "Source Sans Pro";
+// }
+
+.bg-brimary-liner {
+    color: #fff;
+    background: -moz-linear-gradient(bottom, #fdaf6d 0%, #f56b49 100%);
+    background: -webkit-linear-gradient(bottom, #fdaf6d 0%, #f56b49 100%);
+    background: linear-gradient(to bottom, #fdaf6d 0%, #f56b49 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdaf6d00', endColorstr='#f56b4900', GradientType=1);
+}
+
+.page-paid-suc {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: none;
+}
+
+.page-paid-suc .icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-paid-suc .form-group {
+    font-size: 24px;
+    margin: 1em auto;
+    padding: 0 5px;
+}
+
+.page-paid-suc .form-group.paid-tips,
+.page-paid-suc .form-group.paid-suc-text,
+.page-paid-suc .form-group.item-price {
+    margin-bottom: 1em;
+}
+
+.page-paid-suc .form-group.item-price {
+    padding-top: 1em;
+}
+
+.page-paid-suc .paid-phonenumber,
+.page-paid-suc .btn-submit {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 4px;
+    height: 2em;
+    line-height: 2em;
+    box-sizing: border-box;
+}
+
+.page-paid-suc .btn-submit:focus,
+.page-paid-suc .paid-phonenumber:focus {
+    outline: none;
+}
+.page-paid-suc .paid-phonenumber {
+    border: solid 2px #eea871;
+    padding: 0;
+    text-indent: .2em;
+}
+
+.page-paid-suc .paid-phonenumber:focus {
+    border-color: #f56f4b;
+}
+
+.page-paid-suc .btn-submit {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.page-paid-suc .paid-tips {
+    font-size: 13px;
+    text-align: left;
+}
+
+.page-paid-suc .paid-tips span {
+    color: #ff1c1c;
+}
+
+.page-paid-suc .price-paid {
+    font-size: 36px;
+}
+
+.page-paid-suc .icon-paid-suc {
+    width: 2em;
+    height: 2em;
+    background: url(../images/paid_suc.png) center no-repeat;
+    background-size: cover;
+}
+
+.page-paid-suc .form-error {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+    text-align: center;
+    font-size: 16px;
+    padding: 1em 0;
+    box-sizing: border-box;
+    color: #333;
+    display: none;
+    border-bottom: solid 1px #f0f0f0;
+}

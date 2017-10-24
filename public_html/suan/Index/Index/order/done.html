@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>周易算命网</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link href="../../../Public/Index/css/wap.min.css?v=0731" rel="stylesheet" type="text/css" />
+		<link href="../../../Public/Index/css/bazijingpi.min.css" rel="stylesheet" type="text/css" />
+		<script src="../../../Public/Index/js/jquery-1.7.2.min.js"></script>
+		<script src="../../../Public/Index/js/require.min.js" data-main="/Public/Index/js/common.min.js?v=0731"></script>
+	</head>
+
+	<body>
+		<header class="public_header">
+			<h1 class="public_h_con">八字精批</h1>
+			<a class="public_h_home" href="../../../Index/Index/index.html"></a>
+		</header>
+		<div class="public_banner"><img src="../../../Public/Index/images/bzzy_banner.jpg" alt="八字精批" /></div>
+		<div class="bazi_order">
+			<div class="order clear">
+				<div class="left"><span>订单号：</span></div>
+				<div class="auto" id='ordernumber' types='八字算命'><span>bz2089803</span></div>
+			</div>
+
+			<section class="bazi_pay">
+				<div class="price_box">
+
+					<p><span class="red" id="product_price">支付完成</span></p>
+					<p>请加老师微信 <span class="red">suan8886</span> 详批命理</p>
+				</div>
+
+				<div class="bp_box">
+					<p>已有<span class="red">22443727</span>缘主进行在线测算，知悉了自己事业财运、婚姻情感、今年运势上的情况，<span class="red">98.7%</span>用户觉得本测算对人生规划发展有帮助！</p>
+				</div>
+			</section>
+		</div>
+		<footer class="public_footer_servers">
+			<p>周易算命网</p>
+			<p>客服7x24小时在线</p>
+			<div class="pf_payment"><span>Payment</span><img src="../../../Public/Index/images/payment.png" alt=""></div>
+		</footer>
+		<div style="display: none">
+
+		</div>
+
+		<div style=" height: 25px;"></div>
+		<script>
+			//底部悬浮
+			;
+			(function($) {
+				$.fn.publicPopup = function(opt) {
+					var pp = $('#publicPayPopup');
+					var ppClose = $('#publicPPClose');
+					var topShow = $(".J_payBottomShow").length > 0 ? $(".J_payBottomShow").offset().top : 200;
+					var ppShow = $(".J_payPopupShow").length > 0 ? $(".J_payPopupShow") : '';
+					return this.each(function() {
+						var $this = $(this);
+						$(window).scroll(function() {
+							var wt = $(window).scrollTop();
+							wt > topShow ? $this.fadeIn() : $this.fadeOut();
+						});
+						$this.on('click', function() {
+							pp.show();
+						});
+						ppClose.on('click', function() {
+							pp.hide();
+						})
+						ppShow ? ppShow.on('click', function() {
+							pp.show()
+						}) : '';
+					});
+				};
+
+			})(jQuery);
+			$("#publicPayBottom").publicPopup();
+
+			//动态设置支付from的action地址
+			host = window.location.host;//获取域名
+			var http = 'http://'+host;
+			$(".weixinpayFrom").attr("action", http+'/wap2/pay/weixinpay_suan.php');
+			$(".alipayFrom").attr("action", http+'/wap2/pay/alipay_suan.php');
+
+		</script>
+		<!--此处js用于保存订单到本地-->
+		<script src="../../../Public/Index/js/localdata.js"></script>
+	</body>
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?d6171fc44735066530ba341c3c20049e";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</html>

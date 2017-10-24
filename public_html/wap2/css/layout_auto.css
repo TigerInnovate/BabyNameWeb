@@ -1,0 +1,75 @@
+@charset "utf-8";
+/*rest css*/
+html{width:100%;min-height:100%;outline:0;font-size:20px;font-family:"微软雅黑";-webkit-text-size-adjust:none;}
+body,dd,div,dl,figure,form,h1,h2,h3,h4,h5,h6,input,li,ol,p,textarea,ul,em,font,span{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-appearance: none;}
+body{background-color:#fff;color:#444;font-family:"微软雅黑";padding-bottom:47px;}
+ol,ul{list-style:none;}
+img{border:none;vertical-align:middle;}
+a{outline:0;border:0 none;text-decoration:none;-webkit-tap-highlight-color:transparent;color:#000;}
+.clearfix:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0;content:'\200B';}
+.clearfix{zoom:1;}
+html{max-width:750px;min-width:320px; margin:0 auto; position:relative;}
+body{max-width:750px;min-width:320px; overflow-x:hidden;font-size:14px;background:#eee;}
+em{font-style:normal;}
+/*header*/
+header{background:#fff;overflow:hidden;}
+header img{width:100%;}
+/*轮播器*/
+.swiper-container{width:100%;height:1.85rem;background:#000;}
+.swiper-container img{margin:0 auto;display:block;height:100%;}
+.swiper-pagination-bullet-active{background:#fff !important;}
+.swiper-pagination-bullet{width:.3rem !important;height:4px !important;border-radius:0 !important;}
+
+.hint{font-size:17px;font-weight:700;text-align:center;padding:.20rem 0;background:#E2DACF;border-top:1px solid #EFEFEF;}
+.hint2{font-size:16px;text-align:center;padding:.20rem 0;background:#E2DACF;color:#FB0102;border-top:1px solid #EFEFEF;}
+
+.block{margin:20px 5px;}
+.block p{overflow:hidden;}
+.block .color{color:#FF3333;}
+.block1 table{background:#fff;border-bottom:1px solid #C09D65;border-left:1px solid #C09D65;width:100%;line-height:1.8;font-size:18px;border-collapse: collapse;border-spacing: 0;display:table;word-wrap:break-word;word-break:break-all;white-space:normal;overflow:hidden;}
+.block1 table th{background:#C09D65;border-top:1px solid #C09D65;border-right:1px solid #C09D65;text-align:center;padding:.15rem 0;display: table-cell;vertical-align: inherit;font-weight:normal;color:#fff;font-size: 18px;}
+.block1 table td{border-top:1px solid #C09D65;border-right:1px solid #C09D65;text-align:center;padding:.15rem 10px;display: table-cell;vertical-align: inherit;width:150px;overflow:hidden}
+.block1 table td.l{text-align:left;}
+.block1 table td.f{min-width:60px;max-width:60px;width:60px;table-layout:fixed;padding:0 !important;}
+.block span{display:block;width:60px;float:left;}
+.block span.lable{width:80px;}
+
+.block2{overflow:hidden;}
+.block2 dl{border:1px solid #C09D65;background:#fff;}
+.block2 dl dt{font-size:18px;text-align:center;background:#BF9C65;color:#fff;padding:.15rem 0;}
+.block2 dl dd{overflow:hidden;background:#fff;text-align:center;}
+.block2 dl span{width:30%;margin:.2rem 1.533333333333333333% 0 1.533333333333333333%;display:block;padding:.2rem 0;font-size:15px;background:#F5E2C3;float:left;}
+.block2 dl dd.huanyihuan{margin:.2rem 1.5%}
+.block2 dl dd img{width:100%;cursor:pointer;}
+
+.block3{font-size:15px;line-height:1.8;}
+
+.blockadd1 .txt{border:1px solid #BF9C65;background:#fff;padding:10px 15px;font-size:18px;line-height:180%;}
+.blockadd1 .txt em{background:#FF0101;color:#FFFC00;padding:0 5px;margin-right:10px;}
+
+
+.jdt{height:10px;padding:10px 0;position:relative;}
+.jdt .t{float:right;width:90px;line-height:30px;position:absolute;right:0;top:0;}
+.jdt .jdts{margin-right:100px;height:10px;;box-sizing:border-box;}
+.jdt .z{height:8px;}
+.jdt .jdts.s1{border:1px solid #BF9D65;}
+.jdt .jdts.s2{border:1px solid #009943;}
+.jdt .jdts.s3{border:1px solid #0000FF;}
+.jdt .jdts.s4{border:1px solid #E50011;}
+.jdt .jdts.s5{border:1px solid #59483E;}
+.jdt .jdts.s1 .z{background:#BF9D65;}
+.jdt .jdts.s2 .z{background: #009943;}
+.jdt .jdts.s3 .z{background: #0000FF;}
+.jdt .jdts.s4 .z{background:#E50011;}
+.jdt .jdts.s5 .z{background: #59483E;}
+
+
+
+@media(min-width:1px) and (max-width:375px){
+      .block1 table{font-size:15px;}
+      .hint{font-size:16px;}
+      .hint2{font-size:15px;}
+      .block3{font-size:15px;line-height:1.8;}
+      .block2 dl span{font-size:15px;}
+      .blockadd1 .txt{font-size:15px;}
+}

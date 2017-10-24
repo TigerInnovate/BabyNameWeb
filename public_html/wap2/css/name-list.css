@@ -1,0 +1,77 @@
+.page-name-list{
+	background-color: #FFFBF4;
+	font-size: 18px;
+}
+.page-name-list .top-title{
+	background-color: #fff;
+	margin-bottom: 5px;
+	text-align: center;
+	position: relative;
+	padding: 1em 0;
+	cursor: pointer;
+}
+.page-name-list .top-title .options{
+	background-color: rgba(0,0,0,.4);
+	color: #fff;
+	position: absolute;
+	top: 80%;
+	padding: 0 12%;
+	border-radius: 4px;
+	right: 20%;
+	display: none;
+	z-index: 999;
+}
+.page-name-list .top-title .options a{
+	display: block;
+	padding: .25em 0;
+}
+.options.show{
+	display: inline-block;
+}
+.page-name-list .top-title .icon-drop{
+	display: inline-block;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #5E0000 transparent transparent transparent;
+	margin-left: 10px;
+}
+.page-name-list .top-title .icon-qumingdaquan{
+	color: #5E0000
+}
+.page-name-list .top-title .options:after{
+	content: '';
+	display: block;
+	border-style: solid;
+	border-width: 6px;
+	border-color: transparent transparent rgba(0,0,0,.4) transparent;
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	margin-left: -6px;
+}
+
+.name-list-wrapper .list-item{
+	margin: 5px auto;
+}
+.name-list-wrapper .list-item a{
+	display: block;
+	position: relative;
+	padding: 1em 10px;
+	font-size: 16px;
+	background-color: #FDF3E2 ;
+}
+.name-list-wrapper .list-item .icon-more{
+	font-size: .5rem;
+	display: inline-block;
+	height: .5rem;
+	line-height: .5rem;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -.25rem;
+}
+
+#addWeixin{
+	text-align: center;
+}
